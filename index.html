@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radiology &amp; Medical Imaging Providers — Proposed Amendments, July 2026 Drafts</title>
+<meta name="description" content="Provision-by-provision comparison of the July 2026 draft amendments to the Framework Contract and its implementing rules, for radiology and medical imaging providers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&family=Red+Hat+Mono:wght@400;500;700&family=Red+Hat+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#37008D;
+  --violet-2:#7D5DE7;
+  --violet-soft:#F2EEFC;
+  --teal:#2AD1BC;
+  --teal-ink:#0A7368;
+  --teal-soft:#E6FAF7;
+  --ink:#1D1D29;
+  --body:#3B3648;
+  --mute:#78718A;
+  --line:#EAE6F2;
+  --paper:#FAF9FC;
+  --sans:"Red Hat Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Red Hat Display","Red Hat Text",system-ui,sans-serif;
+  --mono:"Red Hat Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --shadow:0 1px 2px rgba(29,29,41,.04), 0 8px 24px -12px rgba(55,0,141,.14);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font-family:var(--sans);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a{color:var(--violet);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+h1,h2,h3{color:var(--ink)}
+
+/* ---------- notice ---------- */
+.notice{background:var(--violet);color:#EDE6FB}
+.notice .wrap{padding:13px 24px}
+.notice p{margin:0;font-size:14.5px;line-height:1.5;max-width:96ch}
+.notice b{color:#fff;font-weight:600}
+.notice a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5)}
+
+/* ---------- hero ---------- */
+.hero{background:#fff;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-160px;top:-220px;width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(125,93,231,.14), rgba(42,209,188,.10) 45%, transparent 70%);
+  pointer-events:none;
+}
+.hero .wrap{padding:56px 24px 46px;position:relative;z-index:1}
+.eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:.075em;text-transform:uppercase;
+  color:var(--violet-2);margin:0 0 18px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--teal);border-radius:2px;flex:none}
+h1{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(32px,5.2vw,58px);line-height:1.03;letter-spacing:-.03em;
+  margin:0 0 20px;max-width:19ch;
+}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--violet) 0%,var(--violet-2) 55%,var(--teal-ink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin:0;max-width:62ch;font-size:19px;line-height:1.62;color:var(--body)}
+.byline{margin:26px 0 0;font-size:14px;color:var(--mute);display:flex;align-items:center;gap:9px}
+.byline .mark{font-family:var(--display);font-weight:800;color:var(--violet);letter-spacing:-.01em;font-size:16px}
+
+/* ---------- sticky toolbar ---------- */
+.bar{position:sticky;top:0;z-index:30;background:rgba(250,249,252,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 24px;flex-wrap:wrap}
+.seg{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px;box-shadow:var(--shadow)}
+.seg button{
+  font-family:var(--sans);font-size:14.5px;font-weight:600;color:var(--body);
+  border:0;background:transparent;padding:9px 18px;border-radius:999px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:9px;white-space:nowrap;transition:background .18s,color .18s;
+}
+.seg button:hover{color:var(--violet)}
+.seg button .n{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--mute);background:var(--violet-soft);border-radius:20px;padding:2px 8px}
+.seg button[aria-pressed="true"]{background:var(--violet);color:#fff}
+.seg button[aria-pressed="true"] .n{background:rgba(255,255,255,.2);color:#fff}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.lang button{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.05em;padding:9px 15px;border:0;background:transparent;color:var(--body);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+
+/* ---------- section labels ---------- */
+.slabel{
+  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-.005em;
+  color:var(--violet);margin:0 0 26px;display:flex;align-items:center;gap:12px;
+}
+.slabel::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- KPI ---------- */
+.kpi-section{padding:56px 0 54px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.k-tag{
+  align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--teal-ink);background:var(--teal-soft);border:1px solid rgba(10,115,104,.18);
+  border-radius:8px;padding:5px 11px;margin:0 0 18px;
+}
+.k-tag.v{color:var(--violet);background:var(--violet-soft);border-color:rgba(55,0,141,.14)}
+.k-tag.w{color:#6B5628;background:#FFF8E9;border-color:#EBD9AF}
+.kpi .k-metric{
+  font-family:var(--display);font-weight:800;font-size:clamp(28px,3.2vw,38px);line-height:1.05;
+  letter-spacing:-.03em;color:var(--violet);margin:0;
+}
+.kpi .k-unit{display:block;margin-top:9px;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.kpi h3{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.28;margin:20px 0 10px;letter-spacing:-.015em}
+.kpi p{margin:0 0 20px;font-size:15.5px;line-height:1.6}
+.k-src{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.k-src>span{display:block;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-bottom:12px}
+.k-src ul{margin:0;padding:0;list-style:none}
+.k-src li{margin-bottom:9px;font-size:14px;line-height:1.45;color:var(--body)}
+.k-src li:last-child{margin-bottom:0}
+.act{
+  display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.03em;
+  padding:2px 9px;border-radius:6px;margin-right:8px;white-space:nowrap;
+  background:var(--violet-soft);color:var(--violet);
+}
+.act.ord{background:var(--teal-soft);color:var(--teal-ink)}
+.k-src code{font-family:var(--mono);font-size:13px;color:var(--body)}
+
+/* ---------- timeline ---------- */
+.timeline{padding:46px 0 54px}
+.tl{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.tl article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.tl article::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--violet-2),var(--teal))}
+.tl .t-date{font-family:var(--mono);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--violet);display:block;margin-bottom:10px}
+.tl p{margin:0;font-size:15.5px;line-height:1.6}
+
+/* ---------- parts ---------- */
+.part{padding:8px 0 20px}
+.part[hidden]{display:none}
+.part-head{margin-bottom:34px}
+.part-head h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,34px);line-height:1.14;letter-spacing:-.028em;margin:0 0 10px;max-width:36ch}
+.part-head p{margin:0;color:var(--mute);font-size:16px;max-width:76ch}
+.subhead{
+  font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.015em;color:var(--ink);
+  margin:44px 0 18px;display:flex;align-items:center;gap:12px;
+}
+.subhead::before{content:"";width:8px;height:8px;border-radius:3px;background:var(--teal);flex:none}
+
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 28px;font-size:14px;color:var(--mute);align-items:center}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+ins{background:var(--teal-soft);color:var(--teal-ink);text-decoration:none;box-shadow:inset 0 -1.5px 0 rgba(10,115,104,.45);padding:1px 2px;border-radius:3px;font-weight:500}
+del{color:var(--mute);text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:rgba(120,113,138,.7)}
+
+.row{background:#fff;border:1px solid var(--line);border-radius:18px;margin-bottom:16px;overflow:hidden;box-shadow:var(--shadow)}
+.row-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:15px 24px;border-bottom:1px solid var(--line);background:var(--violet-soft)}
+.row[data-kind="new"] .row-head{background:var(--teal-soft)}
+.row[data-kind="repealed"] .row-head{background:#F4F3F7}
+.pt{font-family:var(--mono);font-size:12.5px;font-weight:700;color:#fff;background:var(--violet);border-radius:7px;padding:4px 10px;white-space:nowrap}
+.row[data-kind="new"] .pt{background:var(--teal-ink)}
+.row[data-kind="repealed"] .pt{background:var(--mute)}
+.badge{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet)}
+.row[data-kind="new"] .badge{color:var(--teal-ink)}
+.row[data-kind="repealed"] .badge{color:var(--mute)}
+.ref{font-size:15px;font-weight:600;color:var(--ink);flex:1 1 240px;min-width:0}
+.row-body{display:grid;grid-template-columns:1fr 1fr}
+.cell{padding:24px 26px;font-size:15.5px;line-height:1.68}
+.cell+.cell{border-left:1px solid var(--line)}
+.cell-label{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin:0 0 14px}
+.cell p{margin:0 0 12px}
+.cell p:last-child{margin-bottom:0}
+.cell ul{margin:0 0 12px;padding-left:20px}
+.cell li{margin-bottom:7px}
+.none{color:var(--mute);font-style:italic}
+.xref{display:block;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--mute)}
+.gap{display:block;padding:14px 16px;background:#FFF8E9;border:1px solid #F0DDB0;border-radius:12px;font-size:14.5px;color:#6B5628}
+mark{background:rgba(42,209,188,.4);padding:1px 4px;border-radius:4px;color:var(--ink)}
+
+footer{margin-top:64px;border-top:1px solid var(--line);background:#fff}
+footer .wrap{padding:40px 24px 56px}
+footer h4{font-family:var(--display);font-weight:700;font-size:15px;color:var(--violet);margin:0 0 14px}
+footer p{font-size:15px;color:var(--body);max-width:88ch;margin:0}
+noscript div{padding:20px;background:#FFF8E9;border:1px solid #F0DDB0;border-radius:12px;margin:24px 0}
+
+body[data-lang="en"] [data-l="ro"]{display:none}
+body[data-lang="ro"] [data-l="en"]{display:none}
+
+@media (max-width:980px){
+  .kpis{grid-template-columns:1fr}
+  .row-body{grid-template-columns:1fr}
+  .cell+.cell{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:700px){
+  body{font-size:16px}
+  .tl{grid-template-columns:1fr}
+  .bar .wrap{gap:10px}
+  .seg{width:100%;justify-content:stretch;overflow:hidden}
+  .seg button{flex:1 1 0;min-width:0;justify-content:center;padding:9px 8px;font-size:13px;gap:6px;white-space:normal;line-height:1.2;text-align:center}
+  .seg button .n{padding:2px 6px;font-size:11px}
+  .lang{width:100%}
+  .lang button{flex:1}
+  .hero .wrap{padding:40px 24px 34px}
+  .cell{padding:20px}
+  .row-head{padding:14px 20px;gap:10px}
+  .lede{font-size:17px}
+}
+@media print{
+  .notice,.bar{display:none}
+  .part[hidden]{display:block!important}
+  body{background:#fff;font-size:10.5pt}
+  .row{page-break-inside:avoid;box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body data-lang="en">
+
+<div class="notice">
+  <div class="wrap">
+    <p>
+      <span data-l="en"><b>Draft legislation.</b> Both instruments were published for public consultation by the National Health Insurance House on 30 July 2026 and are not in force. Consultation file: <a href="https://cnas.ro/transparenta-decizionala/" target="_blank" rel="noopener">cnas.ro/transparenta-decizionala</a></span>
+      <span data-l="ro"><b>Proiecte de acte normative.</b> Ambele au fost publicate în transparență decizională de Casa Națională de Asigurări de Sănătate la 30 iulie 2026 și nu sunt în vigoare. Dosarul consultării: <a href="https://cnas.ro/transparenta-decizionala/" target="_blank" rel="noopener">cnas.ro/transparenta-decizionala</a></span>
+    </p>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">
+      <span data-l="en">Romanian social health insurance &middot; Paraclinical ambulatory care</span>
+      <span data-l="ro">Asigurări sociale de sănătate &middot; Ambulatoriu paraclinic</span>
+    </p>
+    <h1>
+      <span data-l="en">What changes for <em>radiology and medical imaging</em> providers</span>
+      <span data-l="ro">Ce se schimbă pentru furnizorii de <em>radiologie și imagistică medicală</em></span>
+    </h1>
+    <p class="lede">
+      <span data-l="en">A provision-by-provision comparison of the two July 2026 drafts — the Government Decision amending the Framework Contract, and the Order amending its implementing rules — limited to what applies to radiology, medical imaging and nuclear medicine providers.</span>
+      <span data-l="ro">Comparație, dispoziție cu dispoziție, a celor două proiecte din iulie 2026 — hotărârea de modificare a Contractului-cadru și ordinul de modificare a normelor metodologice — limitată la ce se aplică furnizorilor de radiologie, imagistică medicală și medicină nucleară.</span>
+    </p>
+    <p class="byline">
+      <span data-l="en">Analysis by</span><span data-l="ro">Analiză realizată de</span>
+      <span class="mark">Medima</span>
+    </p>
+  </div>
+</header>
+
+<noscript>
+  <div class="wrap"><div>
+    This page renders its comparison tables with JavaScript. Please enable JavaScript to read them.
+    &mdash; Această pagină generează tabelele comparative cu JavaScript. Activați JavaScript pentru a le consulta.
+  </div></div>
+</noscript>
+
+<main>
+
+<section class="kpi-section">
+  <div class="wrap">
+    <div class="kpis">
+
+      <article class="kpi">
+        <p class="k-tag"><span data-l="en">Teleradiology</span><span data-l="ro">Teleradiologie</span></p>
+        <p class="k-metric">01.01.2028<span class="k-unit"><span data-l="en">Date of application</span><span data-l="ro">Data aplicării</span></span></p>
+        <h3><span data-l="en">Teleradiology enters the reimbursed package</span><span data-l="ro">Teleradiologia intră în pachetul decontat</span></h3>
+        <p>
+          <span data-l="en">A paraclinical provider may contract investigations delivered through an authorised teleradiology provider. Seven additional documents are required at contracting. The rules on delivery, reimbursement and reporting are yet to be approved.</span>
+          <span data-l="ro">Furnizorul paraclinic poate contracta investigații acordate prin intermediul unui furnizor de teleradiologie autorizat. La contractare se depun șapte documente suplimentare. Regulile de acordare, decontare și raportare urmează să fie aprobate.</span>
+        </p>
+        <div class="k-src">
+          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezultă</span>
+          <ul>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 1 — Annex 1, letter E, new point 3</span><span data-l="ro">pct. 1 — anexa 1, lit. E, pct. 3 nou</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 25 — Art. 71(3) and (4)</span><span data-l="ro">pct. 25 — art. 71 alin. (3) și (4)</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">Art. II — date of application</span><span data-l="ro">art. II — data aplicării</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="kpi">
+        <p class="k-tag"><span data-l="en">Teleradiology</span><span data-l="ro">Teleradiologie</span></p>
+        <p class="k-metric"><span data-l="en">Any specialty</span><span data-l="ro">Orice specialitate</span><span class="k-unit"><span data-l="en">Physician on site, whole programme</span><span data-l="ro">Medic prezent, pe tot programul</span></span></p>
+        <h3><span data-l="en">Teleradiology requires a physician on site, of any specialty, with competence in the provision of first aid</span><span data-l="ro">Teleradiologia cere un medic prezent, de orice specialitate, cu competență în acordarea primului ajutor</span></h3>
+        <p>
+          <span data-l="en">The provider no longer needs a radiology–imaging or nuclear medicine physician in the laboratory, but must prove, throughout the declared programme, the presence of a physician with competence in the provision of first aid, responsible for medical emergencies, including adverse reactions to contrast media.</span>
+          <span data-l="ro">Furnizorul nu mai are nevoie de un medic de radiologie–imagistică medicală sau de medicină nucleară în laborator, dar trebuie să facă dovada prezenței, pe tot programul declarat, a unui medic cu competență în acordarea primului ajutor, responsabil pentru urgențele medicale, inclusiv reacțiile adverse la substanța de contrast.</span>
+        </p>
+        <div class="k-src">
+          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezultă</span>
+          <ul>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 25 — Art. 71(4)</span><span data-l="ro">pct. 25 — art. 71 alin. (4)</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 32 — Art. 74 s)</span><span data-l="ro">pct. 32 — art. 74 lit. s)</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="kpi">
+        <p class="k-tag v"><span data-l="en">Reporting deadline</span><span data-l="ro">Termen de raportare</span></p>
+        <p class="k-metric">5 &rarr; 3<span class="k-unit"><span data-l="en">Working days to report</span><span data-l="ro">Zile lucrătoare până la rezultat</span></span></p>
+        <h3><span data-l="en">Three working days to interpret and to communicate the result</span><span data-l="ro">Trei zile lucrătoare pentru interpretare și comunicarea rezultatului</span></h3>
+        <p>
+          <span data-l="en">The deadline drops from five to three working days, under the signature of the radiologist.</span>
+          <span data-l="ro">Termenul scade de la cinci la trei zile lucrătoare, sub semnătura medicului radiolog.</span>
+        </p>
+        <div class="k-src">
+          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezultă</span>
+          <ul>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 33 — Art. 74, new letter ae)</span><span data-l="ro">pct. 33 — art. 74, lit. ae) nouă</span></li>
+            <li><span class="act ord" data-l="en">Implementing rules</span><span class="act ord" data-l="ro">Norme metodologice</span><span data-l="en">pt. 66 — Annex 18, Art. 3(1)</span><span data-l="ro">pct. 66 — anexa 18, art. 3 alin. (1)</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="kpi">
+        <p class="k-tag w"><span data-l="en">Termination</span><span data-l="ro">Reziliere</span></p>
+        <p class="k-metric"><span data-l="en">No private patients</span><span data-l="ro">Fără pacienți privați</span><span class="k-unit"><span data-l="en">On the declared equipment, in the declared hours</span><span data-l="ro">Pe aparatura declarată, în programul declarat</span></span></p>
+        <h3><span data-l="en">Using the equipment for private patients during the programme declared to the insurance house ends the contract</span><span data-l="ro">Utilizarea echipamentelor pentru pacienți privați pe programul declarat la casa de asigurări duce la rezilierea contractului</span></h3>
+        <p>
+          <span data-l="en">A private provider declares on its own responsibility that the equipment held is used, throughout the working programme declared and set out in the contract, exclusively for patients within the social health insurance system. A finding to the contrary is a ground for termination, not a graduated sanction.</span>
+          <span data-l="ro">Furnizorul privat declară pe propria răspundere că aparatura din dotare este utilizată, pe toată durata programului de lucru declarat și prevăzut în contract, exclusiv pacienților din sistemul de asigurări sociale de sănătate. Constatarea contrarului este motiv de reziliere, nu sancțiune graduală.</span>
+        </p>
+        <div class="k-src">
+          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezultă</span>
+          <ul>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 30 — Art. 73(1), new letter ț)</span><span data-l="ro">pct. 30 — art. 73 alin. (1), lit. ț) nouă</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 36 — Art. 82(1) i)</span><span data-l="ro">pct. 36 — art. 82 alin. (1) lit. i)</span></li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="Act">
+      <button type="button" id="seg-hg" aria-pressed="true">
+        <span data-l="en">Framework Contract</span><span data-l="ro">Contractul-cadru</span><span class="n">18</span>
+      </button>
+      <button type="button" id="seg-ord" aria-pressed="false">
+        <span data-l="en">Implementing rules</span><span data-l="ro">Normele metodologice</span><span class="n">11</span>
+      </button>
+    </div>
+    <div class="lang" role="group" aria-label="Language / Limbă">
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-ro" aria-pressed="false">RO</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:34px">
+  <div class="legend">
+    <span><span class="sw" style="background:var(--teal-ink)"></span><span data-l="en">New</span><span data-l="ro">Nou</span></span>
+    <span><span class="sw" style="background:var(--violet)"></span><span data-l="en">Amended</span><span data-l="ro">Modificat</span></span>
+    <span><span class="sw" style="background:var(--mute)"></span><span data-l="en">Repealed</span><span data-l="ro">Abrogat</span></span>
+    <span><ins data-l="en">inserted wording</ins><ins data-l="ro">text introdus</ins></span>
+    <span><del data-l="en">removed wording</del><del data-l="ro">text eliminat</del></span>
+  </div>
+</div>
+
+<div id="parts"></div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h4><span data-l="en">Reading notes</span><span data-l="ro">Note de lectură</span></h4>
+    <p>
+      <span data-l="en">Romanian is the authentic language of both instruments; the English column is a working translation and has no official standing. The text in force is taken from the consolidated version of 16 January 2026 of the Framework Contract, of 1 January 2026 of the implementing rules and of 13 February 2025 of Annex 18. Point numbers refer to the numbering used in the drafts. Where a draft point rewrites an entire provision, the wording carried over unchanged is shown without marking, so that only the substantive delta stands out. The model contract in Annex 21 to Order 1857/441/2023, which the draft repeals, is described rather than reproduced in full.</span>
+      <span data-l="ro">Limba autentică a ambelor acte este româna; coloana în engleză este o traducere de lucru și nu are caracter oficial. Textul în vigoare este preluat din forma consolidată la 16 ianuarie 2026 a Contractului-cadru, la 1 ianuarie 2026 a normelor metodologice și la 13 februarie 2025 a anexei nr. 18. Numerotarea punctelor este cea din proiecte. Acolo unde un punct din proiect rescrie integral o dispoziție, textul preluat nemodificat este redat fără marcaje, astfel încât să rămână vizibilă doar diferența de fond. Modelul de contract din anexa nr. 21 la Ordinul nr. 1857/441/2023, pe care proiectul îl abrogă, este descris, nu reprodus integral.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+var NONE = {
+  en:'<span class="none">No equivalent provision.</span>',
+  ro:'<span class="none">Nu există dispoziție corespondentă.</span>'
+};
+
+var PARTS = [
+{
+  id:'hg',
+  title:{en:'Government Decision amending GD 521/2023 — the Framework Contract', ro:'Hotărâre de Guvern pentru modificarea HG nr. 521/2023 — Contractul-cadru'},
+  sub:{en:'Annex 1 (service packages) and Annex 2 (Framework Contract), Chapter V — ambulatory specialist care, paraclinical specialties.',
+       ro:'Anexa nr. 1 (pachetele de servicii) și anexa nr. 2 (Contractul-cadru), capitolul V — asistența medicală ambulatorie de specialitate, specialități paraclinice.'},
+  groups:[
+   {label:{en:'Scope of the reimbursed package', ro:'Sfera pachetului decontat'}, rows:[
+    {
+      pt:'1', kind:'new',
+      ref:{en:'Annex 1, Ch. II, letter E — new point 3', ro:'Anexa nr. 1, cap. II, lit. E — pct. 3 nou'},
+      cur:{
+        en:'<p>Letter E lists two categories of paraclinical investigations: point 1, laboratory tests; point 2, radiology — medical imaging and nuclear medicine, split into conventional investigations (ionising and non-ionising) and high-performance investigations, including nuclear medicine.</p>'+NONE.en,
+        ro:'<p>Lit. E cuprinde două categorii de investigații paraclinice: pct. 1, analize de laborator; pct. 2, radiologie — imagistică medicală și medicină nucleară, împărțită în investigații convenționale (iradiante și neiradiante) și investigații de înaltă performanță, inclusiv medicină nucleară.</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>3. List of paraclinical investigations — radiology — medical imaging delivered through teleradiology.</ins></p>',
+        ro:'<p><ins>3. Lista investigațiilor paraclinice – radiologie – imagistică medicală acordate prin teleradiologie.</ins></p>'
+      }
+    },
+    {
+      pt:'2', kind:'amended',
+      ref:{en:'Annex 1, Ch. II — Note to letter E', ro:'Anexa nr. 1, cap. II — Nota de la lit. E'},
+      cur:{
+        en:'<p>NOTE: The conditions and criteria for granting paraclinical investigations — laboratory tests, radiology — medical imaging and nuclear medicine are established by the implementing rules.</p>',
+        ro:'<p>NOTĂ: Condiţiile şi criteriile acordării investigaţiilor paraclinice - analize medicale de laborator, radiologie - imagistică medicală şi medicină nucleară se stabilesc prin norme.</p>'
+      },
+      pro:{
+        en:'<p>NOTE: The conditions and criteria for granting paraclinical investigations — laboratory tests, radiology — medical imaging and nuclear medicine <ins>and of the services delivered through teleradiology</ins> are established by the implementing rules.</p>',
+        ro:'<p>NOTĂ: Condiţiile şi criteriile acordării investigaţiilor paraclinice - analize medicale de laborator, radiologie - imagistică medicală şi medicină nucleară <ins>și a serviciilor acordate prin teleradiologie</ins> se stabilesc prin norme.</p>'
+      }
+    }
+   ]},
+   {label:{en:'Eligibility and contract architecture', ro:'Eligibilitate și arhitectura contractului'}, rows:[
+    {
+      pt:'25', kind:'new',
+      ref:{en:'Annex 2, Art. 71 — new paragraphs (3) and (4)', ro:'Anexa nr. 2, art. 71 — alin. (3) și (4) noi'},
+      cur:{
+        en:'<p>Article 71 contains only paragraphs (1), on eligibility conditions, and (2), on the forms of organisation through which paraclinical ambulatory care is delivered.</p>'+NONE.en,
+        ro:'<p>Articolul 71 cuprinde numai alin. (1), privind condițiile de eligibilitate, și alin. (2), privind formele de organizare prin care se acordă asistența medicală ambulatorie paraclinică.</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>(3) The paraclinical service providers referred to in paragraph (2) may conclude contracts with teleradiology providers organised under Order of the Minister of Health no. 1584/2023 approving the specific rules on the organisation and functioning of teleradiology, as subsequently amended and supplemented, and authorised for teleradiology services by the county public health directorates and by that of the Municipality of Bucharest.</ins></p><p><ins>(4) Paraclinical service providers that have concluded contracts with teleradiology providers shall prove the presence, throughout the programme declared in the contract with the health insurance house, of a physician with competence in the provision of first aid, responsible for intervening in medical emergencies, including in the event of adverse reactions to the administration of contrast media.</ins></p>',
+        ro:'<p><ins>(3) Furnizorii de servicii medicale paraclinice prevăzuți la alin. (2) pot încheia contracte cu furnizorii de teleradiologie organizați potrivit prevederilor Ordinului ministrului sănătății nr. 1584/2023 pentru aprobarea Normelor specifice de organizare și funcționare a teleradiologiei, cu modificările și completările ulterioare și autorizați pentru servicii de teleradiologie de direcţiile judeţene de sănătate publică şi a municipiului Bucureşti.</ins></p><p><ins>(4) Furnizorii de servicii medicale paraclinice care au încheiat contracte cu furnizorii de teleradiologie fac dovada prezenței pe toată durata programului declarat în contractul cu casa de asigurări de sănătate a unui medic cu competenţă în acordarea primului ajutor, responsabil pentru intervenţia în situaţii de urgenţă medicală, inclusiv în cazul reacţiilor adverse la administrarea substanţei de contrast.</ins></p>'
+      }
+    },
+    {
+      pt:'26', kind:'new',
+      ref:{en:'Annex 2 — new Art. 71¹, separate contracts for laboratory and for imaging', ro:'Anexa nr. 2 — art. 71¹ nou, contracte distincte pentru laborator și pentru imagistică'},
+      cur:{
+        en:'<p>A single contract covers all paraclinical domains held by the provider. The legal representative concludes one contract with the health insurance house in whose territory the provider has its operating seat, branches or registered and authorised work points, or with the insurance house of the defence, public order, national security and judiciary system (Art. 72(5)).</p>'+NONE.en,
+        ro:'<p>Un singur contract acoperă toate domeniile paraclinice ale furnizorului. Reprezentantul legal încheie un singur contract cu casa de asigurări de sănătate în a cărei rază administrativ-teritorială își are sediul lucrativ, filiale sau puncte de lucru înregistrate și autorizate, ori cu C.A.S.A.O.P.S.N.A.J. (art. 72 alin. (5)).</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>Art. 71¹. — (1) The health insurance houses shall conclude separate contracts, under the conditions of this Chapter, with:</ins></p><ul><li><ins>a) providers of paraclinical medical services — laboratory tests;</ins></li><li><ins>b) providers of paraclinical medical services — paraclinical investigations of radiology — medical imaging and nuclear medicine.</ins></li></ul><p><ins>(2) Contracting under paragraph (1) shall observe the eligibility conditions applicable to each category of paraclinical service provider.</ins></p><p><ins>(3) Paraclinical service providers may conclude contracts for one or both categories of services referred to in paragraph (1), depending on whether the selection criteria laid down in the implementing rules are met.</ins></p><p><ins>(4) Reimbursement of paraclinical medical services shall be made separately for each type of contract, within the limits and under the conditions set out in the contracts concluded with the health insurance houses.</ins></p>',
+        ro:'<p><ins>Art. 71¹. - (1) Casele de asigurări de sănătate încheie contracte distincte, în condiţiile prezentului capitol, cu:</ins></p><ul><li><ins>a) furnizorii de servicii medicale paraclinice – analize de laborator;</ins></li><li><ins>b) furnizorii de servicii medicale paraclinice – investigaţii medicale paraclinice de radiologie – imagistică medicală şi medicină nucleară.</ins></li></ul><p><ins>(2) Contractarea prevăzută la alin. (1) se realizează cu respectarea condiţiilor de eligibilitate pentru fiecare categorie de furnizori de servicii medicale paraclinice.</ins></p><p><ins>(3) Furnizorii de servicii medicale paraclinice pot încheia contracte pentru una sau ambele categorii de servicii prevăzute la alin. (1), în funcţie de îndeplinirea criteriilor de selecție prevăzute în norme.</ins></p><p><ins>(4) Decontarea serviciilor medicale paraclinice se realizează distinct pentru fiecare tip de contract, în limitele şi condiţiile stabilite prin contractele încheiate cu casele de asigurări de sănătate.</ins></p>'
+      }
+    },
+    {
+      pt:'27', kind:'amended',
+      ref:{en:'Annex 2, Art. 72(1) — physicians holding several paraclinical specialties', ro:'Anexa nr. 2, art. 72 alin. (1) — medici cu mai multe specialități paraclinice'},
+      cur:{
+        en:'<p>Paraclinical service providers conclude contracts with the health insurance houses for the physicians they represent, based on the specialty obtained by them and confirmed by order of the Minister of Health. Where a physician holds several paraclinical specialties confirmed by order of the Minister of Health, that physician may practise <del>under the contract concluded with the health insurance house, being able to deliver and report medical services corresponding to those specialties, provided that the provider is registered in the single register of practices for those specialties and is health-authorised for them, subject to a corresponding working programme.</del></p>',
+        ro:'<p>Furnizorii de servicii medicale paraclinice încheie contracte cu casele de asigurări de sănătate pentru medicii pe care îi reprezintă, în baza specialităţii obţinute de către aceştia şi confirmate prin ordin al ministrului sănătăţii. În situaţia în care un medic are mai multe specialităţi paraclinice confirmate prin ordin al ministrului sănătăţii, acesta îşi poate desfăşura activitatea <del>în baza contractului încheiat cu casa de asigurări de sănătate, putând acorda şi raporta servicii medicale aferente specialităţilor respective, în condiţiile în care furnizorul este înregistrat în registrul unic al cabinetelor pentru aceste specialităţi şi autorizat sanitar pentru acestea, cu respectarea unui program de lucru corespunzător.</del></p>'
+      },
+      pro:{
+        en:'<p>Paraclinical service providers conclude contracts with the health insurance houses for the physicians they represent, based on the specialty obtained by them and confirmed by order of the Minister of Health. Where a physician holds several paraclinical specialties confirmed by order of the Minister of Health, that physician may practise <ins>under the contract or the separate contracts concluded with the health insurance house, within the same provider and/or at two different providers, being able to deliver and report medical services corresponding to each paraclinical specialty, within the relevant type of contract, provided that each provider is registered in the single register of practices for those specialties and is health-authorised for them, in compliance with the Framework Contract and its implementing rules, including as regards the working programme, the reporting and the reimbursement of medical services.</ins></p>',
+        ro:'<p>Furnizorii de servicii medicale paraclinice încheie contracte cu casele de asigurări de sănătate pentru medicii pe care îi reprezintă, în baza specialităţii obţinute de către aceştia şi confirmate prin ordin al ministrului sănătăţii. În situaţia în care un medic are mai multe specialităţi paraclinice confirmate prin ordin al ministrului sănătăţii, acesta îşi poate desfăşura activitatea <ins>în baza contractului sau a contractelor distincte încheiate cu casa de asigurări de sănătate, în cadrul aceluiaşi furnizor şi/sau la doi furnizori diferiţi, putând acorda şi raporta servicii medicale corespunzătoare fiecărei specialităţi paraclinice, în cadrul tipului de contract aferent cu condiţia ca fiecare furnizor să fie înregistrat în registrul unic al cabinetelor pentru specialităţile respective şi autorizat sanitar pentru acestea, cu respectarea prevederilor contractului-cadru şi ale normelor metodologice de aplicare, inclusiv în ceea ce priveşte programul de lucru, raportarea şi decontarea serviciilor medicale.</ins></p>'
+      }
+    },
+    {
+      pt:'28', kind:'amended',
+      ref:{en:'Annex 2, Art. 72(8) — one contract per physician becomes two', ro:'Anexa nr. 2, art. 72 alin. (8) — de la un contract la două per medic'},
+      cur:{
+        en:'<p>Each physician in a paraclinical specialty delivering specialist services in an ambulatory unit among those referred to in Art. 71(2) <del>practises under a single contract concluded with the health insurance house, with the possibility of increasing the working programme under the conditions of paragraph (10).</del></p><p><del>An exception is made for physicians with clinical integration in a hospital in a contractual relationship with a health insurance house, who may practise outside the hospital working programme, including the hospital integrated ambulatory unit, in a practice organised under Government Ordinance no. 124/1998, so that the entire activity carried out in relation to the health insurance house complies with labour law. Physicians with clinical integration in a hospital means integrated teaching staff, as provided in Art. 165 of Law no. 95/2006.</del></p>',
+        ro:'<p>Fiecare medic de specialitate din specialităţile paraclinice care acordă servicii medicale de specialitate într-o unitate sanitară din ambulatoriul de specialitate dintre cele prevăzute la art. 71 alin. (2) <del>îşi desfăşoară activitatea în baza unui singur contract încheiat cu casa de asigurări de sănătate, cu posibilitatea de a-şi majora programul de activitate în condiţiile prevăzute la alin. (10).</del></p><p><del>Excepţie fac medicii de specialitate cu integrare clinică într-un spital aflat în relaţie contractuală cu o casă de asigurări de sănătate, care pot desfăşura activitate în afara programului de lucru din spital, inclusiv ambulatoriul integrat al spitalului, într-un cabinet organizat potrivit prevederilor Ordonanţei Guvernului nr. 124/1998, republicată, cu modificările şi completările ulterioare, astfel încât întreaga activitate desfăşurată în relaţie cu casa de asigurări de sănătate să respecte legislaţia muncii. Prin medicii de specialitate cu integrare clinică într-un spital se înţelege personalul didactic integrat, astfel cum este prevăzut la art. 165 din Legea nr. 95/2006, republicată, cu modificările şi completările ulterioare.</del></p>'
+      },
+      pro:{
+        en:'<p>Each physician in a paraclinical specialty delivering specialist services in an ambulatory unit among those referred to in Art. 71(2) <ins>may practise under a maximum of two contracts concluded with one or two health insurance houses, as follows:</ins></p><ul><li><ins>a) physicians practising in laboratories serving inpatient wards of public hospitals may also practise in private ambulatory care, provided that they deliver medical services in public ambulatory care, in accordance with Art. III(1) of Law no. 163/2025;</ins></li><li><ins>b) physicians with clinical integration in a hospital in a contractual relationship with a health insurance house may practise outside the hospital working programme, including the hospital integrated ambulatory unit, in a practice organised under Government Ordinance no. 124/1998. Physicians with clinical integration in a hospital means integrated teaching staff, as provided in Art. 165 of Law no. 95/2006;</ins></li><li><ins>c) physicians practising in the ambulatory unit of a public hospital may conclude a contract in private ambulatory care, provided that they deliver medical services in public ambulatory care in accordance with the schedule set by the hospital manager;</ins></li><li><ins>d) physicians practising in private ambulatory care may conclude two contracts, provided that these are in different localities;</ins></li><li><ins>e) physicians practising in the ambulatory unit of a public hospital, including the hospital integrated ambulatory unit, may practise within another public ambulatory unit, including the integrated ambulatory unit of the public hospital.</ins></li></ul>',
+        ro:'<p>Fiecare medic de specialitate din specialităţile paraclinice care acordă servicii medicale de specialitate într-o unitate sanitară din ambulatoriul de specialitate dintre cele prevăzute la art. 71 alin. (2) <ins>îşi poate desfășura activitatea în baza a maximum două contracte încheiate cu una sau două case de asigurări de sănătate, astfel:</ins></p><ul><li><ins>a) medicii care își desfășoară activitatea în laboratoarele care deservesc secțiile de spitalizare din spitalele publice, își pot desfășura activitatea și în ambulatoriul privat, cu condiția să acorde servicii medicale în ambulatoriul public, conform art. III alin. (1) din Legea nr. 163/2025, cu modificările și completările ulterioare;</ins></li><li><ins>b) medicii de specialitate cu integrare clinică într-un spital aflat în relație contractuală cu o casă de asigurări de sănătate, pot desfășura activitate în afara programului de lucru din spital, inclusiv ambulatoriul integrat al spitalului, într-un cabinet organizat potrivit prevederilor Ordonanței Guvernului nr. 124/1998, republicată, cu modificările și completările ulterioare. Prin medicii de specialitate cu integrare clinică într-un spital se înțelege personalul didactic integrat, astfel cum este prevăzut la art. 165 din Legea nr. 95/2006, republicată, cu modificările și completările ulterioare;</ins></li><li><ins>c) medicii care își desfășoară activitatea în ambulatoriul unui spital public pot încheia contract în ambulatoriul privat cu condiția să acorde servicii medicale în ambulatoriul public conform graficului stabilit de către managerul spitalului;</ins></li><li><ins>d) medicii care își desfășoară activitatea în ambulatoriul privat pot încheia două contracte, cu condiția să fie în localități diferite;</ins></li><li><ins>e) medicii care își desfășoară activitatea în ambulatoriul unui spital public, inclusiv în ambulatoriul integrat al spitalului, își pot desfășura activitatea în cadrul unui alt ambulatoriu public, inclusiv în ambulatoriul integrat al spitalului public.</ins></li></ul>'
+      }
+    },
+    {
+      pt:'29', kind:'new',
+      ref:{en:'Annex 2, Art. 72 — new paragraph (11), appointment application', ro:'Anexa nr. 2, art. 72 — alin. (11) nou, aplicația de programări'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>(11) As from 1 October 2026, in order to hold contractual relations with the health insurance house, providers shall use the appointment-management IT application, which will be made available free of charge and for which the technical interfacing and IT security specifications will be published with a view to integrating third-party applications, under the conditions established by order of the President of the National Health Insurance House, aligned with PIAS PNRR.</ins></p>',
+        ro:'<p><ins>(11) Începând cu data de 01.10.2026, pentru a derula relații contractuale cu casa de asigurări de sănătate, furnizorii vor utiliza aplicația informatică pentru gestionarea programărilor, aplicație care va fi pusă la dispozitie in mod gratuit și pentru care se vor publica specificațiile tehnice de interfațare și de securitate informatică în vederea integrării aplicațiilor terțe, in condițiile stabilite prin ordin al președintelui Casei Naționale de Asigurări de Sănătate, aliniate la PIAS PNRR.</ins></p>'
+      }
+    }
+   ]},
+   {label:{en:'Documents required at contracting', ro:'Documente necesare la contractare'}, rows:[
+    {
+      pt:'30', kind:'new',
+      ref:{en:'Annex 2, Art. 73(1) — new letters ț) and u)', ro:'Anexa nr. 2, art. 73 alin. (1) — lit. ț) și u) noi'},
+      cur:{
+        en:'<p>The list of contracting documents in Art. 73(1) ends at letter t). It already includes, at letters g) and h), the periodic verification bulletin for radiology — medical imaging and nuclear medicine equipment and the use notice issued by ANMDMR for second-hand equipment, and, at letter l), the ISO 9001/2015 certificate for radiology — medical imaging and nuclear medicine providers.</p>'+NONE.en,
+        ro:'<p>Lista documentelor de contractare din art. 73 alin. (1) se încheie la lit. t). Ea cuprinde deja, la lit. g) și h), buletinul de verificare periodică pentru aparatura de radiologie — imagistică medicală și medicină nucleară și avizul de utilizare emis de ANMDMR pentru aparatura second-hand, iar la lit. l), certificatul ISO 9001/2015 pentru furnizorii de radiologie — imagistică medicală și medicină nucleară.</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>ț) the declaration on own responsibility, for private medical service providers, on the use of the medical equipment held, throughout the working programme declared and set out in the contract concluded with the health insurance house, exclusively for patients within the social health insurance system.</ins></p><p><ins>u) the declaration on own responsibility concerning the contracts under which the physicians practise, where they operate under two contracts concluded with the health insurance house or houses, the model of which is set out in the implementing rules.</ins></p>',
+        ro:'<p><ins>ț) declarația pe proprie răspundere pentru furnizorii de servicii medicale privați cu privire la utilizarea aparaturii medicale din dotare pe toată durata programului de lucru declarat și prevăzut în contractul încheiat cu casa de asigurări de sănătate, exclusiv pacienților din sistemul de asigurări sociale de sănătate.</ins></p><p><ins>u) declaraţie pe propria răspundere privind contractele în baza cărora medicii îşi desfăşoară activitatea, în cazul în care aceştia activează sub incidenţa a două contracte încheiate cu casa/casele de asigurări de sănătate, al cărei model este prevăzut în norme.</ins></p>'
+      }
+    },
+    {
+      pt:'31', kind:'new',
+      ref:{en:'Annex 2, Art. 73 — new paragraph (1¹), the teleradiology file', ro:'Anexa nr. 2, art. 73 — alin. (1¹) nou, dosarul de teleradiologie'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>(1¹) Paraclinical service providers that have concluded a contract with a teleradiology provider shall submit both the documents referred to in paragraph (1) and the following documents:</ins></p><ul><li><ins>a) the instrument evidencing the contractual relationship with the teleradiology provider;</ins></li><li><ins>b) the health operating authorisation issued by the county public health directorates or by that of the Municipality of Bucharest under Order of the Minister of Health no. 1584/2023;</ins></li><li><ins>c) proof of accreditation of the teleradiology provider or of its enrolment in the accreditation process, valid at the date the contract is concluded, with the obligation to renew it throughout the term of the contract;</ins></li><li><ins>d) the tax registration code — the unique registration code of the teleradiology provider;</ins></li><li><ins>e) proof of civil liability insurance in the medical field for the teleradiology provider, valid at the date the contract is concluded, with the obligation to renew it throughout the term of the contract;</ins></li><li><ins>f) the list, assumed by electronic signature, of the physicians covered by the teleradiology supply contract who lawfully practise at the provider, together with their working programme in relation to the paraclinical service provider, in the form set out in the implementing rules;</ins></li><li><ins>g) the certificate of membership of the Romanian College of Physicians for the physicians referred to in letter f), valid at the date the contract is concluded and renewed throughout the term of the contract.</ins></li></ul>',
+        ro:'<p><ins>(1¹) Furnizorii de servicii medicale paraclinice care au încheiat contract cu un furnizor de teleradiologie, depun atât documentele prevăzute la alin. (1), cât și următoarele documente:</ins></p><ul><li><ins>a) actul doveditor privind relația contractuală cu furnizorul de teleradiologie;</ins></li><li><ins>b) autorizația sanitară de funcționare emisă de direcţiile judeţene de sănătate publică sau a municipiului Bucureşti potrivit prevederilor Ordinului ministrului sănătății nr. 1584/2023, cu modificările și completările ulterioare;</ins></li><li><ins>c) dovada de acreditare sau de înscriere a furnizorului de teleradiologie în procesul de acreditare valabilă la data încheierii contractului, cu obligaţia de a o reînnoi pe toată perioada derulării contractului;</ins></li><li><ins>d) codul de înregistrare fiscală - codul unic de înregistrare pentru furnizorul de teleradiologie;</ins></li><li><ins>e) dovada asigurării de răspundere civilă în domeniul medical pentru furnizorul de teleradiologie, valabilă la data încheierii contractului, cu obligaţia de a o reînnoi pe toată perioada derulării contractului;</ins></li><li><ins>f) lista, asumată prin semnătură electronică, cu medicii care intră sub incidenţa contractului de furnizare de teleradiologie şi care îşi desfăşoară activitatea în mod legal la furnizor, precum şi programul de lucru al acestora în relație cu furnizorul de servicii medicale paraclinice, conform modelului prevăzut în norme;</ins></li><li><ins>g) certificatul de membru al CMR pentru medicii prevăzuți la lit. f), valabil la data încheierii contractului şi reînnoit pe toată perioada derulării contractului.</ins></li></ul>'
+      }
+    }
+   ]},
+   {label:{en:'Provider obligations', ro:'Obligațiile furnizorului'}, rows:[
+    {
+      pt:'32', kind:'amended',
+      ref:{en:'Annex 2, Art. 74 s) — physician present in the imaging laboratory', ro:'Anexa nr. 2, art. 74 lit. s) — prezența medicului în laboratorul de imagistică'},
+      cur:{
+        en:'<p>[…] to ensure the presence of a radiology — medical imaging physician, respectively of a nuclear medicine physician, in each radiology — medical imaging, respectively nuclear medicine, laboratory or work point within the structure of the provider, throughout the working programme declared and set out in the contract concluded with the health insurance house for that laboratory or work point; […]</p><span class="xref">The letter also governs the presence of laboratory medicine, microbiology and pathology staff; only the imaging limb is reproduced here.</span>',
+        ro:'<p>[…] să asigure prezenţa unui medic de radiologie - imagistică medicală, respectiv de medicină nucleară în fiecare laborator de radiologie - imagistică medicală, respectiv medicină nucleară/punct de lucru din structura furnizorului, pe toată durata programului de lucru declarat şi prevăzut în contractul încheiat cu casa de asigurări de sănătate pentru respectivul laborator/punct de lucru; […]</p><span class="xref">Litera reglementează și prezența personalului de medicină de laborator, microbiologie și anatomie patologică; aici este redată numai teza privind imagistica.</span>'
+      },
+      pro:{
+        en:'<p>[…] to ensure the presence of a radiology — medical imaging physician, respectively of a nuclear medicine physician, in each radiology — medical imaging, respectively nuclear medicine, laboratory or work point within the structure of the provider, throughout the working programme declared and set out in the contract concluded with the health insurance house for that laboratory or work point, <ins>with the exception of providers that have concluded contractual relations with teleradiology providers, which shall prove the presence, throughout the programme declared in the contract with the health insurance house, of a physician with competence in the provision of first aid, responsible for intervening in medical emergencies, including in the event of adverse reactions to the administration of contrast media</ins>; […]</p>',
+        ro:'<p>[…] să asigure prezenţa unui medic de radiologie - imagistică medicală, respectiv de medicină nucleară în fiecare laborator de radiologie - imagistică medicală, respectiv medicină nucleară/punct de lucru din structura furnizorului, pe toată durata programului de lucru declarat şi prevăzut în contractul încheiat cu casa de asigurări de sănătate pentru respectivul laborator/punct de lucru, <ins>cu excepția furnizorilor care au încheiat relații contractuale cu furnizori de teleradiologie, care fac dovada prezenței pe toată durata programului declarat în contractul cu casa de asigurări de sănătate a unui medic cu competenţă în acordarea primului ajutor, responsabil pentru intervenţia în situaţii de urgenţă medicală, inclusiv în cazul reacţiilor adverse la administrarea substanţei de contrast</ins>; […]</p>'
+      }
+    },
+    {
+      pt:'33', kind:'new',
+      ref:{en:'Annex 2, Art. 74 — new letters ad), ae) and af)', ro:'Anexa nr. 2, art. 74 — lit. ad), ae) și af) noi'},
+      cur:{
+        en:'<p>The list of obligations ends at letter ac). The only provision on the fate of images is letter ț): to store in its own archive the images resulting from paraclinical radiology — medical imaging and nuclear medicine investigations, in accordance with the technical specifications of the equipment and under the conditions set out in the implementing rules, for the insured persons to whom those services were provided.</p><span class="xref">No obligation of patient or prescriber access, no reporting deadline in the Framework Contract, and no informed consent requirement for image transfer.</span>',
+        ro:'<p>Lista obligațiilor se încheie la lit. ac). Singura dispoziție privind soarta imaginilor este lit. ț): să stocheze în arhiva proprie imaginile rezultate ca urmare a investigaţiilor medicale paraclinice de radiologie - imagistică medicală şi medicină nucleară, în conformitate cu specificaţiile tehnice ale aparatului şi în condiţiile prevăzute în norme, pentru asiguraţii cărora le-au furnizat aceste servicii.</p><span class="xref">Nicio obligație de acces al pacientului sau al medicului prescriptor, niciun termen de raportare în Contractul-cadru și nicio cerință de consimțământ informat pentru transferul de imagini.</span>'
+      },
+      pro:{
+        en:'<p><ins>ad) to ensure, for at least 10 calendar years for adults and for at least 10 years plus the number of years remaining until the age of 18 for children, through a permanently available platform, secure electronic access for patients and prescribing physicians, from the moment the investigation is validated and signed, to the result report in standardised format, as well as to the images generated by the paraclinical investigation. Access is granted individually, on the basis of a user name and a password;</ins></p><p><ins>ae) to prove that the paraclinical radiology — medical imaging and nuclear medicine investigation has been interpreted, and the result communicated, within a maximum of 3 working days from its performance, under the signature of the radiologist; failing which, the value of the medical service shall be recovered from the provider;</ins></p><p><ins>af) to obtain in writing the patient\u2019s informed consent for the practice of the teleradiology service and for the transfer of images to the teleradiology provider.</ins></p>',
+        ro:'<p><ins>ad) să asigure pentru o perioadă de cel puțin 10 ani calendaristici pentru adulți și pentru o perioadă de cel puțin 10 ani la care se adaugă diferența de ani până la vârsta de 18 ani pentru copii, prin intermediul unei platforme disponibile permanent, accesul electronic securizat al pacienților și al medicilor prescriptori, din momentul validării și semnării investigației, a buletinului de rezultat în format standardizat, precum și la imaginile generate în urma investigației paraclinice. Accesul se realizează individual, pe baza numelui de utilizator și a parolei;</ins></p><p><ins>ae) să facă dovada interpretării investigației paraclinice de radiologie - imagistică medicală și medicină nucleară, precum și a comunicării rezultatului în maximum 3 zile lucrătoare de la efectuarea acesteia, prin semnătura medicului radiolog, în caz contrar, contravaloarea serviciului medical se recuperează de la furnizor;</ins></p><p><ins>af) să obțină în scris consimțământul informat al pacientului pentru practicarea serviciului de teleradiologie, precum și pentru transferul de imagini către furnizorul de teleradiologie.</ins></p>'
+      }
+    }
+   ]},
+   {label:{en:'Insurance house duties, sanctions and termination', ro:'Obligațiile casei, sancțiuni și reziliere'}, rows:[
+    {
+      pt:'34', kind:'new',
+      ref:{en:'Annex 2, Art. 76 — new letter s), mid-month monitoring', ro:'Anexa nr. 2, art. 76 — lit. s) nouă, monitorizarea la mijlocul lunii'},
+      cur:{
+        en:'<p>The list of health insurance house duties ends at letter r).</p>'+NONE.en,
+        ro:'<p>Lista obligațiilor caselor de asigurări de sănătate se încheie la lit. r).</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>s) to monitor the value of the paraclinical medical services delivered under contract by each provider, by tracking the rate of use of the allocated contract value. In the third week of the current month, they shall analyse the rate of use corresponding to services delivered between the 1st and the 15th of the month and, depending on the usage thresholds set by the implementing rules of the Framework Contract, shall reduce the contract value for providers recording a usage rate below the minimum threshold and, respectively, increase the contract value, by concluding addenda, for providers recording a usage rate above the upper threshold.</ins></p>',
+        ro:'<p><ins>s) să monitorizeze contravaloarea serviciilor medicale paraclinice efectuate în relație contractuală de către fiecare furnizor, prin urmărirea gradului de utilizare a valorii de contract alocate. În a treia săptămână a lunii în curs, acestea analizează gradul de utilizare aferent serviciilor realizate în perioada 1–15 a lunii și, în funcție de pragurile de utilizare stabilite prin normele metodologice de aplicare ale Contractului-cadru, procedează la diminuarea valorii de contract pentru furnizorii care înregistrează un grad de utilizare sub pragul minim stabilit și, respectiv, la suplimentarea valorii de contract, prin încheierea de acte adiționale, pentru furnizorii care înregistrează un grad de utilizare peste pragul superior stabilit.</ins></p>'
+      }
+    },
+    {
+      pt:'35', kind:'amended',
+      ref:{en:'Annex 2, Art. 80(2) — graduated sanctions', ro:'Anexa nr. 2, art. 80 alin. (2) — sancțiuni graduale'},
+      cur:{
+        en:'<p>Where, during the term of the contract, a breach of one or more of the obligations laid down in Art. 74 a), c), f), g), h), j), k), l), n)–p), v), w), <del>ac)</del> is found, the following sanctions apply: a) first finding, written warning; b) second finding, a 3% reduction in the value of the paraclinical services for the month in which the situation was recorded; c) third finding, a 5% reduction.</p>',
+        ro:'<p>În cazul în care în perioada derulării contractului se constată nerespectarea uneia sau mai multor obligaţii prevăzute la art. 74 lit. a), c), f), g), h), j), k), l), n)-p), v), w), <del>ac)</del> se aplică următoarele sancţiuni: a) la prima constatare avertisment scris; b) la a doua constatare se diminuează cu 3% contravaloarea serviciilor paraclinice aferente lunii în care s-au înregistrat aceste situaţii; c) la a treia constatare se diminuează cu 5%.</p>'
+      },
+      pro:{
+        en:'<p>Where, during the term of the contract, a breach of one or more of the obligations laid down in Art. 74 a), c), f), g), h), j), k), l), n)–p), v), w), <ins>ac) – af)</ins> is found, the following sanctions apply: a) first finding, written warning; b) second finding, a 3% reduction in the value of the paraclinical services for the month in which the situation was recorded; c) third finding, a 5% reduction.</p><span class="xref">The three new obligations — 10-year access, the 3-working-day deadline and informed consent for teleradiology — are brought within the graduated sanction ladder.</span>',
+        ro:'<p>În cazul în care în perioada derulării contractului se constată nerespectarea uneia sau mai multor obligaţii prevăzute la art. 74 lit. a), c), f), g), h), j), k), l), n) - p), v), w), <ins>ac) – af)</ins> se aplică următoarele sancţiuni: a) la prima constatare avertisment scris; b) la a doua constatare se diminuează cu 3% contravaloarea serviciilor paraclinice aferente lunii în care s-au înregistrat aceste situaţii; c) la a treia constatare se diminuează cu 5%.</p><span class="xref">Cele trei obligații noi — accesul pe 10 ani, termenul de 3 zile lucrătoare și consimțământul informat pentru teleradiologie — intră în scara sancțiunilor graduale.</span>'
+      }
+    },
+    {
+      pt:'36', kind:'amended',
+      ref:{en:'Annex 2, Art. 82(1) i) — termination of the contract', ro:'Anexa nr. 2, art. 82 alin. (1) lit. i) — rezilierea contractului'},
+      cur:{
+        en:'<p>i) in the event of breach of the obligations laid down in <del>Art. 72(8) and of those laid down in</del> Art. 74 q), ș)–u);</p>',
+        ro:'<p>i) în cazul nerespectării obligaţiilor prevăzute la <del>art. 72 alin. (8) şi a celor prevăzute la</del> art. 74 lit. q), ş)-u);</p>'
+      },
+      pro:{
+        en:'<p>i) in the event of breach of the obligations laid down in Art. 74 q), ș) – u) <ins>and ad), as well as where it is found that, during the working programme, the equipment held has been used outside the social health insurance system, contrary to the declaration provided for in Art. 73(1) ț)</ins>;</p><span class="xref">Termination is decoupled from Art. 72(8) — consistent with the move from one contract to two per physician — and is attached instead to the 10-year access obligation and to the new declaration on exclusive use of equipment.</span>',
+        ro:'<p>i) în cazul nerespectării obligaţiilor prevăzute la art. 74 lit. q), ş) - u) <ins>și ad), precum și în cazul în care se constată că pe durata programului de lucru, aparatele din dotare au fost utilizate în afara sistemului de asigurări sociale de sănătate, contrar declarației prevăzute la art. 73 alin. (1) lit. ț)</ins>;</p><span class="xref">Rezilierea se desprinde de art. 72 alin. (8) — coerent cu trecerea de la un contract la două per medic — și se leagă, în schimb, de obligația de acces pe 10 ani și de noua declarație privind utilizarea exclusivă a aparaturii.</span>'
+      }
+    }
+   ]},
+   {label:{en:'Cross-cutting provisions and transitional rules', ro:'Dispoziții transversale și tranzitorii'}, rows:[
+    {
+      pt:'71', kind:'amended',
+      ref:{en:'Annex 2, Art. 182(2) — electronic signature', ro:'Anexa nr. 2, art. 182 alin. (2) — semnătura electronică'},
+      cur:{
+        en:'<p>Contracts / addenda to contracts for the supply of medical services, of medicines with or without personal contribution in ambulatory treatment, of medical devices, <del>as well as addenda, may be signed</del> both by the legal representative of the provider and by the health insurance house, by extended or qualified electronic signature.</p>',
+        ro:'<p>Contractele/Actele adiţionale la contractele de furnizare de servicii medicale, de medicamente cu sau fără contribuţie personală în tratamentul ambulatoriu, de dispozitive medicale, <del>precum şi actele adiţionale pot fi semnate</del> atât de reprezentantul legal al furnizorului, cât şi de casa de asigurări de sănătate, prin semnătură electronică extinsă/calificată.</p>'
+      },
+      pro:{
+        en:'<p>Contracts / addenda to contracts for the supply of medical services, of medicines with or without personal contribution in ambulatory treatment, of medical devices, <ins>shall be signed</ins> both by the legal representative of the provider and by the health insurance house, by extended or qualified electronic signature.</p><span class="xref">Electronic signature ceases to be an option and becomes the required form.</span>',
+        ro:'<p>Contractele/Actele adiţionale la contractele de furnizare de servicii medicale, de medicamente cu sau fără contribuţie personală în tratamentul ambulatoriu, de dispozitive medicale, <ins>vor fi semnate</ins> atât de reprezentantul legal al furnizorului, cât şi de casa de asigurări de sănătate, prin semnătură electronică extinsă/calificată.</p><span class="xref">Semnătura electronică încetează să fie o opțiune și devine forma obligatorie.</span>'
+      }
+    },
+    {
+      pt:'73', kind:'new',
+      ref:{en:'Annex 2 — new Art. 189¹, electronic forms', ro:'Anexa nr. 2 — art. 189¹ nou, formulare electronice'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>Art. 189¹. Medical forms without special regime used within the social health insurance system shall be used in electronic format from the date on which they are implemented.</ins></p>',
+        ro:'<p><ins>Art. 189¹ Formularele medicale fără regim special utilizate în cadrul sistemului de asigurări sociale de sănătate se utilizează în format electronic de la data la care acestea se implementează.</ins></p>'
+      }
+    },
+    {
+      pt:'Art. II', kind:'new',
+      ref:{en:'Date of application of the teleradiology provisions', ro:'Data aplicării prevederilor privind teleradiologia'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>(1) The provisions on teleradiology laid down by this Decision shall apply as from 1 January 2028.</ins></p><p><ins>(2) The methodological rules implementing the Framework Contract, establishing the conditions for the delivery, reimbursement and reporting of teleradiology medical services, shall be drawn up and approved by the date referred to in paragraph (1), by joint order of the Minister of Health and the President of the National Health Insurance House.</ins></p>',
+        ro:'<p><ins>(1) Prevederile privind teleradiologia prevăzute de prezenta hotărâre se aplică începând cu data de 1 ianuarie 2028.</ins></p><p><ins>(2) Normele metodologice de aplicare a Contractului-cadru, prin care se stabilesc condițiile de acordare, decontare și raportare a serviciilor medicale de teleradiologie, se elaborează și se aprobă până la data prevazută la alin. (1) prin ordin al ministrului sănătății și al președintelui Casei Naționale de Asigurări de Sănătate.</ins></p>'
+      }
+    },
+    {
+      pt:'Art. III', kind:'new',
+      ref:{en:'Entry into force', ro:'Intrarea în vigoare'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>This Decision shall enter into force on ………………… 2026.</ins></p><span class="xref">The date is left blank in the draft.</span>',
+        ro:'<p><ins>Prezenta hotărâre intră în vigoare la data de ………..................... 2026.</ins></p><span class="xref">Data este lăsată necompletată în proiect.</span>'
+      }
+    }
+   ]}
+  ]
+},
+{
+  id:'ord',
+  title:{en:'Order amending Order 1857/441/2023 — the implementing rules', ro:'Ordin pentru modificarea Ordinului nr. 1857/441/2023 — normele metodologice'},
+  sub:{en:'Annexes 17 (tariffs), 18 (payment mechanics), 20 (selection criteria), 21 (model contracts) and 47 (general provisions).',
+       ro:'Anexele nr. 17 (tarife), 18 (modalități de plată), 20 (criterii de selecție), 21 (modele de contract) și 47 (dispoziții generale).'},
+  groups:[
+   {label:{en:'Nomenclature and tariffs', ro:'Nomenclator și tarife'}, rows:[
+    {
+      pt:'59', kind:'amended',
+      ref:{en:'Annex 17, letter A, point 2 — items 58, 74 and 100', ro:'Anexa nr. 17, lit. A, pct. 2 — poz. 58, 74 și 100'},
+      cur:{
+        en:'<p>58. CT <del>neck</del> native — 175.00</p><p>74. CT <del>neck</del> native and with contrast media — 505.00</p><p>100. MRI <del>neck</del> native — 606.00</p>',
+        ro:'<p>58. CT regiune <del>gât</del> nativ — 175,00</p><p>74. CT regiune <del>gât</del> nativ şi cu substanţă de contrast — 505,00</p><p>100. RMN <del>gât</del> nativ — 606,00</p>'
+      },
+      pro:{
+        en:'<p>58. CT <ins>cervical region</ins> native — 175.00</p><p>74. CT <ins>cervical region</ins> native and with contrast media — 505.00</p><p>100. MRI <ins>cervical region</ins> native — 606.00</p><span class="xref">Tariffs are unchanged; only the anatomical designation is aligned.</span>',
+        ro:'<p>58. CT regiune <ins>cervicală</ins> nativ — 175,00</p><p>74. CT regiune <ins>cervicală</ins> nativ și cu substanță de contrast — 505,00</p><p>100. RMN <ins>regiune cervicală</ins> nativ — 606,00</p><span class="xref">Tarifele rămân neschimbate; se aliniază numai denumirea anatomică.</span>'
+      }
+    },
+    {
+      pt:'Art. II', kind:'new',
+      ref:{en:'Interpretation clause — the term “RMN”', ro:'Normă de interpretare — sintagma „RMN”'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>Throughout the Order amending and supplementing the methodological rules approved by Order 1857/441/2023, the term “RMN” means Magnetic Resonance Imaging (IRM).</ins></p>',
+        ro:'<p><ins>În tot cuprinsul Ordinului privind modificarea şi completarea Normelor metodologice de aplicare a Hotărârii Guvernului nr. 521/2023 […], aprobate prin Ordinul ministrului sănătăţii şi al preşedintelui Casei Naţionale de Asigurări de Sănătate nr. 1.857/441/2023, prin sintagma „RMN” se înțelege Imagistică prin Rezonanță Magnetică (IRM).</ins></p>'
+      }
+    }
+   ]},
+   {label:{en:'Contract value: from end-of-month regularisation to mid-month reallocation', ro:'Valoarea de contract: de la regularizare lunară la realocare la mijlocul lunii'}, rows:[
+    {
+      pt:'60', kind:'new',
+      ref:{en:'Annex 18, Art. 2 — new paragraphs (2¹) to (2³)', ro:'Anexa nr. 18, art. 2 — alin. (2¹)–(2³) noi'},
+      cur:{ en:NONE.en, ro:NONE.ro },
+      pro:{
+        en:'<p><ins>(2¹) The reduction of contract values for paraclinical service providers may be carried out including at the time of contracting, as well as during the month, where, on the basis of the reporting of services delivered and/or of the history of contract value execution, it is found that they cannot be used in full, by negotiation initiated either by the health insurance house or at the request of the providers.</ins></p><p><ins>(2²) The amendment of contract values shall be made by addendum to the contracts concluded and shall take effect for the remainder of the current month; the amounts released by the adjustments may be redistributed, under the law, to other paraclinical service providers, according to the need for services and the rate of use of funds.</ins></p><p><ins>(2³) The monthly contracted amounts set for each provider shall be allocated across two distinct periods of the month, namely the 1st–15th and the 16th–last calendar day of that month. The allocation shall be made in proportion to the number of calendar days in each period, by reference to the total number of days in the month.</ins></p>',
+        ro:'<p><ins>(2¹) Diminuarea valorilor de contract aferente furnizorilor de servicii medicale paraclinice poate fi realizată inclusiv la momentul contractării, precum şi în cursul lunii, în situaţia în care, pe baza raportării serviciilor medicale efectuate și/sau a istoricului execuției valorilor de contract, se constată că acestea nu pot fi utilizate integral, prin negociere iniţiată fie de casa de asigurări de sănătate, fie la solicitarea furnizorilor.</ins></p><p><ins>(2²) Modificarea valorilor de contract se realizează prin act adiţional la contractele încheiate şi produce efecte pentru perioada rămasă din luna în curs, iar sumele rezultate ca disponibil în urma ajustărilor se pot redistribui, în condiţiile legii, către alţi furnizori de servicii medicale paraclinice, în funcţie de necesarul de servicii şi de gradul de utilizare a fondurilor.</ins></p><p><ins>(2³) Sumele contractate lunar stabilite pentru fiecare furnizor se repartizează pe două perioade distincte ale lunii, respectiv 1–15 și 16–ultima zi calendaristică a lunii respective. Repartizarea se realizează proporțional cu numărul de zile calendaristice aferente fiecărei perioade, prin raportare la numărul total de zile al lunii.</ins></p>'
+      }
+    },
+    {
+      pt:'61', kind:'amended',
+      ref:{en:'Annex 18, Art. 2(3) — monthly reimbursement', ro:'Anexa nr. 18, art. 2 alin. (3) — decontarea lunară'},
+      cur:{
+        en:'<p>(3) Each month, the health insurance houses shall reimburse paraclinical service providers for the services delivered, subject to the obligation to remain within the monthly contract <del>value established by type, namely laboratory tests, pathology, radiology — medical imaging and nuclear medicine investigations</del>.</p>',
+        ro:'<p>(3) Lunar, casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice serviciile furnizate cu obligaţia încadrării în limita <del>valorii lunare</del> de contract <del>stabilită pe tipuri, respectiv analize medicale de laborator, anatomie patologică, investigaţii de radiologie-imagistică medicală şi medicină nucleară</del>.</p>'
+      },
+      pro:{
+        en:'<p>(3) Each month, the health insurance houses shall reimburse paraclinical service providers for the services delivered, subject to the obligation to remain within the monthly contract <ins>values established</ins>.</p><span class="xref">The monthly cap ceases to be set per type of investigation and follows the contract values instead.</span>',
+        ro:'<p>(3) Lunar, casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice serviciile furnizate cu obligaţia încadrării în limita <ins>valorilor lunare</ins> de contract <ins>stabilite</ins>.</p><span class="xref">Plafonul lunar nu se mai stabilește pe tipuri de investigații, ci urmează valorile de contract.</span>'
+      }
+    },
+    {
+      pt:'62–64', kind:'new',
+      ref:{en:'Annex 18, Art. 2 — new paragraphs (4²), (5²) and (7²)', ro:'Anexa nr. 18, art. 2 — alin. (4²), (5²) și (7²) noi'},
+      cur:{
+        en:'<p>(4¹) While Art. I(1) of Government Emergency Ordinance no. 34/2023 applies, the provisions of paragraph (4) shall not apply. Where, at the end of a month, unused amounts are recorded at certain providers of ambulatory specialist paraclinical services as against the monthly amount set out in the contract or addendum, the health insurance houses shall reduce, by addendum, the monthly value initially contracted for that month by the unused amounts.</p><p>(5¹) While Art. I(1) of Government Emergency Ordinance no. 34/2023 applies, the provisions of paragraph (5) shall not apply.</p><p>(7¹) While Art. I(1) of Government Emergency Ordinance no. 34/2023 applies, the provisions of paragraph (7) shall not apply.</p><span class="xref">Three parallel provisions already suspend paragraphs (4), (5) and (7), but only while the fiscal-budgetary ordinance applies. The draft adds a second, independent trigger.</span>',
+        ro:'<p>(4¹) Pe perioada de aplicare a prevederilor art. I alin. (1) din Ordonanţa de urgenţă a Guvernului nr. 34/2023 privind unele măsuri fiscal-bugetare, prorogarea unor termene, precum şi pentru modificarea şi completarea unor acte normative, cu modificările şi completările ulterioare, prevederile alin. (4) nu se aplică. În situaţia în care la nivelul unor furnizori de servicii medicale ambulatorii de specialitate pentru serviciile medicale paraclinice se înregistrează la sfârşitul unei luni sume neconsumate faţă de suma lunară prevăzută în contract/actul adiţional, casele de asigurări de sănătate vor diminua printr-un act adiţional la contract/act adiţional valoarea lunară contractată iniţial aferentă lunii respective cu sumele neconsumate.</p><p>(5¹) Pe perioada de aplicare a prevederilor art. I alin. (1) din Ordonanţa de urgenţă a Guvernului nr. 34/2023, cu modificările şi completările ulterioare, prevederile alin. (5) nu se aplică.</p><p>(7¹) Pe perioada de aplicare a prevederilor art. I alin. (1) din Ordonanţa de urgenţă a Guvernului nr. 34/2023 privind unele măsuri fiscal-bugetare, prorogarea unor termene, precum şi pentru modificarea şi completarea unor acte normative, cu modificările şi completările ulterioare, prevederile alin. (7) nu se aplică.</p><span class="xref">Trei dispoziții paralele suspendă deja alineatele (4), (5) și (7), însă numai pe perioada de aplicare a ordonanței fiscal-bugetare. Proiectul adaugă un al doilea declanșator, independent.</span>',
+      },
+      pro:{
+        en:'<p><ins>(4²) While the provisions apply under which, by derogation from Art. 49(4) of Law no. 500/2002, monthly commitment and budgetary credit limits are approved for the budget of the National Single Health Insurance Fund, the provisions of paragraph (4) shall not apply. Where, at the end of a month, unused amounts are recorded at certain providers of ambulatory specialist paraclinical services as against the monthly amount set out in the contract or addendum, the health insurance houses shall reduce, by addendum, the monthly value initially contracted for that month by the unused amounts.</ins></p><p><ins>(5²) While the provisions apply under which, by derogation from Art. 49(4) of Law no. 500/2002, monthly commitment and budgetary credit limits are approved for the budget of the National Single Health Insurance Fund, the provisions of paragraph (5) shall not apply.</ins></p><p><ins>(7²) While the provisions apply under which, by derogation from Art. 49(4) of Law no. 500/2002, monthly commitment and budgetary credit limits are approved for the budget of the National Single Health Insurance Fund, the provisions of paragraph (7) shall not apply.</ins></p>',
+        ro:'<p><ins>(4²) Pe perioada aplicării prevederilor potrivit cărora, prin derogare de la prevederile art. 49 alin. (4) din Legea nr. 500/2002, cu modificările și completările ulterioare, se aprobă lunar limite de credite de angajament și bugetare pentru bugetul Fondului național unic de asigurări sociale de sănătate, prevederile alin. (4) nu se aplică. În situaţia în care la nivelul unor furnizori de servicii medicale ambulatorii de specialitate pentru serviciile medicale paraclinice se înregistrează la sfârşitul unei luni sume neconsumate faţă de suma lunară prevăzută în contract/actul adiţional, casele de asigurări de sănătate vor diminua printr-un act adiţional la contract/act adiţional valoarea lunară contractată iniţial aferentă lunii respective cu sumele neconsumate.</ins></p><p><ins>(5²) Pe perioada aplicării prevederilor potrivit cărora, prin derogare de la prevederile art. 49 alin. (4) din Legea nr. 500/2002, cu modificările și completările ulterioare, se aprobă lunar limite de credite de angajament și bugetare pentru bugetul Fondului național unic de asigurări sociale de sănătate, prevederile alin. (5) nu se aplică.</ins></p><p><ins>(7²) Pe perioada aplicării prevederilor potrivit cărora, prin derogare de la prevederile art. 49 alin. (4) din Legea nr. 500/2002, cu modificările și completările ulterioare, se aprobă lunar limite de credite de angajament și bugetare pentru bugetul Fondului național unic de asigurări sociale de sănătate, prevederile alin. (7) nu se aplică.</ins></p>'
+      }
+    },
+    {
+      pt:'65', kind:'new',
+      ref:{en:'Annex 18, Art. 2 — new paragraphs (9) to (13), the 1–15 mechanism', ro:'Anexa nr. 18, art. 2 — alin. (9)–(13) noi, mecanismul 1–15'},
+      cur:{
+        en:NONE.en+'<span class="xref">The existing mechanism is the one in Art. 2(4), which operates after the month has closed and redistributes unused amounts to providers that exhausted their contract value in the same month.</span>',
+        ro:NONE.ro+'<span class="xref">Mecanismul existent este cel din art. 2 alin. (4), care operează după încheierea lunii și redistribuie sumele neconsumate către furnizorii care și-au epuizat valoarea de contract în aceeași lună.</span>'
+      },
+      pro:{
+        en:'<p><ins>(9) Within three working days from the 16th of each month, the health insurance houses shall analyse the rate of use of the monthly contract value for paraclinical medical services, for the period from the 1st to the 15th of the current month, for each provider.</ins></p><p><ins>(10) Where, for that period, a rate of use of the contract value lower than the one corresponding to that period is recorded, the health insurance houses shall reduce, by addendum to the contract, the monthly contract value for that month, in proportion to the unused amounts.</ins></p><p><ins>(11) The amounts resulting from the reductions under paragraph (10) shall be redistributed, by concluding addenda, to paraclinical service providers which, in the same period, record a rate of use of the contract value higher than the one corresponding to that period of the month.</ins></p><p><ins>(12) Amounts resulting from savings shall not be redistributed to family physicians or to specialist physicians in clinical specialties in ambulatory care that have concluded addenda for the supply of paraclinical medical services.</ins></p><p><ins>(13) The amounts contracted under paragraph (11) shall be used to reimburse paraclinical medical services provided to insured persons from the date the addenda are concluded until the end of the current month, and shall be allocated in proportion to the average consumption achieved by each provider between the 1st and the 15th of the current month.</ins></p>',
+        ro:'<p><ins>(9) Casele de asigurări de sănătate analizează în termen de trei zile lucrătoare, începând cu data de 16 a fiecărei luni, gradul de utilizare a valorii lunare de contract aferente serviciilor medicale paraclinice, pentru perioada 1–15 a lunii în curs, la nivelul fiecărui furnizor.</ins></p><p><ins>(10) În situația în care, pentru perioada prevăzută la alin. (9), se înregistrează un grad de utilizare a valorii de contract mai mic decât cel corespunzător perioadei respective, casele de asigurări de sănătate diminuează, prin act adițional la contract, valoarea lunară de contract aferentă lunii respective, proporțional cu sumele neconsumate.</ins></p><p><ins>(11) Sumele rezultate ca urmare a diminuărilor prevăzute la alin. (10) se redistribuie, prin încheierea de acte adiționale, furnizorilor de servicii medicale paraclinice care, în aceeași perioadă, înregistrează un grad de utilizare a valorii de contract mai mare decât cel corespunzător perioadei respective din lună.</ins></p><p><ins>(12) Sumele rezultate din economii nu se redistribuie pentru medicii de familie/medicii de specialitate din specialităţile clinice din ambulatoriu care au încheiate acte adiţionale pentru furnizare de servicii medicale paraclinice.</ins></p><p><ins>(13) Sumele contractate potrivit alin. (11) se utilizează pentru decontarea serviciilor medicale paraclinice acordate asiguraților începând cu data încheierii actelor adiționale și până la sfârșitul lunii în curs, acestea fiind repartizate proporțional cu consumul mediu realizat de fiecare furnizor în perioada 1-15 ale lunii în curs.</ins></p>'
+      }
+    },
+    {
+      pt:'66', kind:'amended',
+      ref:{en:'Annex 18, Art. 3(1) — the reporting deadline', ro:'Anexa nr. 18, art. 3 alin. (1) — termenul de raportare'},
+      cur:{
+        en:'<p>(1) The health insurance houses shall reimburse paraclinical service providers with which they are in contractual relations for the paraclinical medical services set out in Annex 17 to the Order.</p><p>The tariffs reimbursed by the health insurance houses for paraclinical investigations are those set out in Annex 17 to the Order.</p><p>The health insurance houses shall reimburse paraclinical service providers with which they are in contractual relations for high-performance services (MRI, CT, scintigraphy and angiography) only if the provider proves that the investigation has been interpreted within a maximum of <del>5 working days</del> from its performance, under the signature of the radiologist.</p>',
+        ro:'<p>(1) Casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice cu care sunt în relaţii contractuale contravaloarea serviciilor medicale paraclinice prezentate în anexa nr. 17 la ordin.</p><p>Tarifele decontate de casele de asigurări de sănătate pentru investigaţiile paraclinice sunt cele prevăzute în anexa nr. 17 la ordin.</p><p>Casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice cu care sunt în relaţii contractuale contravaloarea serviciilor de înaltă performanţă (RMN, CT, scintigrafie şi angiografie) numai dacă furnizorul face dovada interpretării investigaţiei în maximum <del>5 zile lucrătoare</del> de la efectuarea acesteia, prin semnătura medicului radiolog.</p>'
+      },
+      pro:{
+        en:'<p>(1) The health insurance houses shall reimburse paraclinical service providers with which they are in contractual relations for the paraclinical medical services set out in Annex 17 to the Order.</p><p>The tariffs reimbursed by the health insurance houses for paraclinical investigations are those set out in Annex 17 to the Order.</p><p>The health insurance houses shall reimburse paraclinical service providers with which they are in contractual relations for high-performance services (MRI, CT, scintigraphy and angiography) only if the provider proves that the investigation has been interpreted within a maximum of <ins>3 working days</ins> from its performance, under the signature of the radiologist.</p><span class="xref">The deadline is the only change; the rest of the paragraph is carried over word for word.</span>',
+        ro:'<p>(1) Casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice cu care sunt în relaţii contractuale contravaloarea serviciilor medicale paraclinice prezentate în anexa nr. 17 la ordin.</p><p>Tarifele decontate de casele de asigurări de sănătate pentru investigaţiile paraclinice sunt cele prevăzute în anexa nr. 17 la ordin.</p><p>Casele de asigurări de sănătate decontează furnizorilor de servicii medicale paraclinice cu care sunt în relaţii contractuale contravaloarea serviciilor de înaltă performanţă (RMN, CT, scintigrafie şi angiografie) numai dacă furnizorul face dovada interpretării investigaţiei în maximum <ins>3 zile lucrătoare</ins> de la efectuarea acesteia, prin semnătura medicului radiolog.</p><span class="xref">Termenul este singura modificare; restul alineatului este preluat cuvânt cu cuvânt.</span>'
+      }
+    }
+   ]},
+   {label:{en:'Selection criteria', ro:'Criterii de selecție'}, rows:[
+    {
+      pt:'69', kind:'new',
+      ref:{en:'Annex 20, Chapter I — new points 5 and 6', ro:'Anexa nr. 20, cap. I — pct. 5 și 6 noi'},
+      cur:{
+        en:'<p>The cumulative selection criteria for radiology — medical imaging and nuclear medicine providers end at point 4: point 1, authorisation and accreditation; point 2, proof of technical capacity, including dental radiography and dental tomography as an independent service within dental practices; point 3, proof that the working programme requested for contracting, which cannot be shorter than 6 hours a day from Monday to Friday for each laboratory or work point, is covered by radiology — medical imaging or nuclear medicine physicians for a full 6-hour shift; point 4, the quality criterion evidenced by ISO 9001/2015 certification.</p>'+NONE.en,
+        ro:'<p>Criteriile cumulative de selecție a furnizorilor de radiologie — imagistică medicală și medicină nucleară se încheie la pct. 4: pct. 1, autorizare și acreditare; pct. 2, dovada capacității tehnice, inclusiv radiografia dentară și tomografia dentară ca prestație independentă în cabinetele de medicină dentară; pct. 3, dovada că programul de lucru solicitat a fi contractat, care nu poate fi mai mic de 6 ore pe zi de luni până vineri pentru fiecare laborator sau punct de lucru, este acoperit de medic/medici de radiologie — imagistică medicală, medicină nucleară, pentru o normă întreagă de 6 ore; pct. 4, criteriul de calitate atestat prin certificare SR EN ISO 9001/2015.</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins>5. Dental medicine physicians who conclude addenda to contracts for the supply of medical services in dental care for the performance of retro-alveolar radiographs, panoramic radiographs, mandibular CBCT dental tomographies, maxillary CBCT dental tomographies and bimaxillary CBCT dental tomographies must hold a level 2 practice permit issued by CNCAN.</ins></p><p><ins>6. As from 1 October 2026, in order to hold contractual relations with the health insurance house, providers shall use the appointment-management IT application, which will be made available free of charge and for which the technical interfacing and IT security specifications will be published with a view to integrating third-party applications, under the conditions established by order of the President of the National Health Insurance House, aligned with PIAS PNRR.</ins></p>',
+        ro:'<p><ins>5. Medicii de medicină dentară care încheie acte adiționale la contractele de furnizare de servicii medicale în asistența medicală stomatologică pentru efectuarea radiografiilor retroalveolare, radiografiilor panoramice, tomografiilor dentare CBCT mandibulare, tomografiilor dentare CBCT maxilare și tomografiilor dentare CBCT bimaxilare trebuie să dețină Permis de exercitare nivel 2 eliberat de CNCAN.</ins></p><p><ins>6. Începând cu data de 01.10.2026, pentru a derula relații contractuale cu casa de asigurări de sănătate, furnizorii vor utiliza aplicația informatică pentru gestionarea programărilor, aplicație care va fi pusă la dispozitie in mod gratuit și pentru care se vor publica specificațiile tehnice de interfațare și de securitate informatică în vederea integrării aplicațiilor terțe, in condițiile stabilite prin ordin al președintelui Casei Naționale de Asigurări de Sănătate, aliniate la PIAS PNRR.</ins></p>'
+      }
+    }
+   ]},
+   {label:{en:'Model contracts', ro:'Modele de contract'}, rows:[
+    {
+      pt:'70', kind:'repealed',
+      ref:{en:'Annex 21 — repealed', ro:'Anexa nr. 21 — abrogată'},
+      cur:{
+        en:'<p>Annex 21 — Contract for the supply of medical services in ambulatory specialist care for the paraclinical specialties — model. A single model covering laboratory tests, pathology, radiology — medical imaging and nuclear medicine.</p>',
+        ro:'<p>Anexa nr. 21 — Contract de furnizare de servicii medicale în asistenţa medicală de specialitate din ambulatoriu pentru specialităţile paraclinice — model. Un model unic, care acoperă analizele de laborator, anatomia patologică, radiologia — imagistica medicală și medicina nucleară.</p>'
+      },
+      pro:{
+        en:'<p><del>Annex 21 is repealed.</del></p>',
+        ro:'<p><del>Anexa nr. 21 se abrogă.</del></p>'
+      }
+    },
+    {
+      pt:'71', kind:'new',
+      ref:{en:'New Annexes 21 A, 21 B and 21 C', ro:'Anexele nr. 21 A, 21 B și 21 C noi'},
+      cur:{
+        en:'<p>One model contract for all paraclinical specialties.</p>'+NONE.en,
+        ro:'<p>Un singur model de contract pentru toate specialitățile paraclinice.</p>'+NONE.ro
+      },
+      pro:{
+        en:'<p><ins><b>Annex 21 A</b> — model contract for the paraclinical specialties laboratory tests and pathology.</ins></p><p><ins><b>Annex 21 B</b> — model contract for the paraclinical specialties radiology, medical imaging and nuclear medicine. Provider obligations in Art. 7 include, at letter p), the presence of a radiology — medical imaging or nuclear medicine physician throughout the declared programme; at letter r), storage of images in the provider’s own archive; at letter y), the 10-year secure electronic access for patients and prescribing physicians; and at letter z), proof of interpretation and communication of the result within a maximum of 3 working days, failing which the value of the service is recovered. Art. 15(2) places letters a), c), f), g), h), j), k), l), n)–p), ș), t), x) and z) under the graduated sanction ladder; Art. 17(1) i) makes breach of letters q)–s) and y) a ground for termination.</ins></p><p><ins><b>Annex 21 C</b> — model declaration on own responsibility listing the physicians operating under two contracts with the health insurance house for the supply of ambulatory paraclinical services, stating for each: name, stamp code, specialty, the two insurance houses and the working programme with each.</ins></p><span class="xref">The teleradiology regime does not appear in the draft Order; it is carried entirely by the Government Decision and by the implementing rules to be adopted before 1 January 2028.</span>',
+        ro:'<p><ins><b>Anexa nr. 21 A</b> — model de contract pentru specialitățile paraclinice analize de laborator și anatomie patologică.</ins></p><p><ins><b>Anexa nr. 21 B</b> — model de contract pentru specialitățile paraclinice radiologie, imagistică medicală și medicină nucleară. Obligațiile furnizorului din art. 7 cuprind, la lit. p), prezența unui medic de radiologie — imagistică medicală, respectiv de medicină nucleară pe toată durata programului declarat; la lit. r), stocarea imaginilor în arhiva proprie; la lit. y), accesul electronic securizat pe 10 ani al pacienților și al medicilor prescriptori; iar la lit. z), dovada interpretării și a comunicării rezultatului în maximum 3 zile lucrătoare, în caz contrar contravaloarea serviciului recuperându-se. Art. 15 alin. (2) așază literele a), c), f), g), h), j), k), l), n)–p), ș), t), x) și z) sub scara sancțiunilor graduale; art. 17 alin. (1) lit. i) face din încălcarea literelor q)–s) și y) motiv de reziliere.</ins></p><p><ins><b>Anexa nr. 21 C</b> — model de declarație pe propria răspundere cu medicii aflați sub incidența a două contracte cu casa de asigurări de sănătate pentru furnizarea serviciilor din ambulatoriul paraclinic, cu: nume, cod de parafă, specialitate, cele două case și programul de activitate la fiecare.</ins></p><span class="xref">Regimul teleradiologiei nu apare în proiectul de ordin; el este purtat integral de hotărârea de Guvern și de normele ce urmează a fi adoptate până la 1 ianuarie 2028.</span>'
+      }
+    }
+   ]},
+   {label:{en:'General provisions', ro:'Dispoziții generale'}, rows:[
+    {
+      pt:'138', kind:'amended',
+      ref:{en:'Annex 47, point 10 — combining specialties', ro:'Anexa nr. 47, pct. 10 — cumulul de specialități'},
+      cur:{
+        en:'<p>[…] <del>Physicians holding one or more clinical specialties as well as a competence or attestation of complementary studies in palliative care may practise under a single contract concluded with the health insurance house in ambulatory specialist clinical care, being able to deliver and report medical services corresponding to those specialties and palliative care services.</del> Physicians holding a clinical specialty and a paraclinical specialty may opt to practise in a contractual relationship with the health insurance house on the basis of the clinical specialty or on the basis of the paraclinical specialty.</p>',
+        ro:'<p>[…] <del>Medicii care au o specialitate/mai multe specialităţi clinice, cât şi competenţă/atestat de studii complementare pentru îngrijiri paliative îşi pot desfăşura activitatea în baza unui singur contract încheiat cu casa de asigurări de sănătate în ambulatoriul clinic de specialitate, putând acorda şi raporta servicii medicale aferente specialităţii/specialităţilor respective şi servicii de îngrijiri paliative.</del> Medicii care au o specialitate clinică şi o specialitate paraclinică pot opta pentru a desfăşura activitate în relaţie contractuală cu casa de asigurări de sănătate, în baza specialităţii clinice sau în baza specialităţii paraclinice.</p>'
+      },
+      pro:{
+        en:'<p>[…] Physicians holding a clinical specialty and a paraclinical specialty may opt to practise in a contractual relationship with the health insurance house on the basis of the clinical specialty or on the basis of the paraclinical specialty.</p><span class="xref">The rule on combining clinical specialties with palliative care is removed; the clinical-versus-paraclinical option is retained unchanged.</span>',
+        ro:'<p>[…] Medicii care au o specialitate clinică şi o specialitate paraclinică pot opta pentru a desfăşura activitate în relaţie contractuală cu casa de asigurări de sănătate, în baza specialităţii clinice sau în baza specialităţii paraclinice.</p><span class="xref">Regula privind cumulul specialităților clinice cu îngrijirile paliative este eliminată; opțiunea clinic–paraclinic rămâne neschimbată.</span>'
+      }
+    }
+   ]}
+  ]
+}
+];
+
+var L = {
+  cur:{en:'Text in force', ro:'Text în vigoare'},
+  pro:{en:'Proposed text', ro:'Text propus'},
+  kind:{
+    'new':{en:'New', ro:'Nou'},
+    'amended':{en:'Amended', ro:'Modificat'},
+    'repealed':{en:'Repealed', ro:'Abrogat'}
+  },
+  pt:{en:'pt.', ro:'pct.'}
+};
+
+function bi(o){ return '<span data-l="en">'+o.en+'</span><span data-l="ro">'+o.ro+'</span>'; }
+
+function render(){
+  var out='';
+  PARTS.forEach(function(part){
+    out+='<section class="part" id="part-'+part.id+'"><div class="wrap">';
+    out+='<div class="part-head"><h2>'+bi(part.title)+'</h2><p>'+bi(part.sub)+'</p></div>';
+    part.groups.forEach(function(g){
+      out+='<h3 class="subhead">'+bi(g.label)+'</h3>';
+      g.rows.forEach(function(r){
+        out+='<article class="row" data-kind="'+r.kind+'">';
+        out+='<div class="row-head">';
+        out+='<span class="pt">'+(/^Art\./.test(r.pt) ? r.pt : bi(L.pt)+' '+r.pt)+'</span>';
+        out+='<span class="badge">'+bi(L.kind[r.kind])+'</span>';
+        out+='<span class="ref">'+bi(r.ref)+'</span>';
+        out+='</div><div class="row-body">';
+        out+='<div class="cell"><p class="cell-label">'+bi(L.cur)+'</p>'+bi(r.cur)+'</div>';
+        out+='<div class="cell"><p class="cell-label">'+bi(L.pro)+'</p>'+bi(r.pro)+'</div>';
+        out+='</div></article>';
+      });
+    });
+    out+='</div></section>';
+  });
+  document.getElementById('parts').innerHTML=out;
+}
+
+function setPart(id, scroll){
+  document.getElementById('part-hg').hidden = (id!=='hg');
+  document.getElementById('part-ord').hidden = (id!=='ord');
+  document.getElementById('seg-hg').setAttribute('aria-pressed', id==='hg'?'true':'false');
+  document.getElementById('seg-ord').setAttribute('aria-pressed', id==='ord'?'true':'false');
+  if(scroll){ document.getElementById('bar').scrollIntoView({block:'start'}); }
+  try{ localStorage.setItem('part',id); }catch(e){}
+}
+
+function setLang(l){
+  document.body.setAttribute('data-lang',l);
+  document.documentElement.setAttribute('lang', l==='ro'?'ro':'en');
+  document.getElementById('btn-en').setAttribute('aria-pressed', l==='en'?'true':'false');
+  document.getElementById('btn-ro').setAttribute('aria-pressed', l==='ro'?'true':'false');
+  try{ localStorage.setItem('lang',l); }catch(e){}
+}
+
+render();
+setPart('hg', false);
+document.getElementById('seg-hg').addEventListener('click',function(){setPart('hg',true);});
+document.getElementById('seg-ord').addEventListener('click',function(){setPart('ord',true);});
+document.getElementById('btn-en').addEventListener('click',function(){setLang('en');});
+document.getElementById('btn-ro').addEventListener('click',function(){setLang('ro');});
+
+var sl=null, sp=null;
+try{ sl=localStorage.getItem('lang'); sp=localStorage.getItem('part'); }catch(e){}
+if(sl==='ro'||sl==='en'){ setLang(sl); }
+else if((navigator.language||'').toLowerCase().indexOf('ro')===0){ setLang('ro'); }
+if(sp==='ord'){ setPart('ord', false); }
+</script>
+</body>
+</html>
