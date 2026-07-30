@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -81,9 +81,24 @@ h1 em{font-style:normal;background:linear-gradient(100deg,var(--violet) 0%,var(-
 .seg button .n{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--mute);background:var(--violet-soft);border-radius:20px;padding:2px 8px}
 .seg button[aria-pressed="true"]{background:var(--violet);color:#fff}
 .seg button[aria-pressed="true"] .n{background:rgba(255,255,255,.2);color:#fff}
-.lang{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-.lang button{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.05em;padding:9px 15px;border:0;background:transparent;color:var(--body);cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.langswitch{position:relative;display:inline-flex;background:#F1EDFA;border:1px solid var(--line);border-radius:999px;padding:5px;flex:none}
+.langswitch::before{
+  content:"";position:absolute;top:5px;left:5px;width:calc(50% - 5px);height:calc(100% - 10px);
+  border-radius:999px;background:linear-gradient(135deg,var(--violet) 0%,var(--violet-2) 100%);
+  box-shadow:0 2px 10px rgba(55,0,141,.3);transition:transform .24s cubic-bezier(.4,0,.2,1);
+}
+body[data-lang="en"] .langswitch::before{transform:translateX(100%)}
+.langswitch button{
+  position:relative;z-index:1;min-width:76px;font-family:var(--sans);font-size:15px;font-weight:700;
+  letter-spacing:.07em;padding:11px 24px;border:0;background:transparent;color:var(--violet);
+  cursor:pointer;transition:color .2s;border-radius:999px;
+}
+.langswitch button[aria-pressed="true"]{color:#fff}
+.langswitch.sm button{min-width:56px;font-size:13px;padding:8px 16px;letter-spacing:.05em}
+.langswitch.sm{padding:4px}
+.langswitch.sm::before{top:4px;left:4px;width:calc(50% - 4px);height:calc(100% - 8px);box-shadow:0 1px 6px rgba(55,0,141,.25)}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+.hero-top .eyebrow{margin:0}
 
 /* ---------- section labels ---------- */
 .slabel{
@@ -193,8 +208,9 @@ body[data-lang="ro"] [data-l="en"]{display:none}
   .seg{width:100%;justify-content:stretch;overflow:hidden}
   .seg button{flex:1 1 0;min-width:0;justify-content:center;padding:9px 8px;font-size:13px;gap:6px;white-space:normal;line-height:1.2;text-align:center}
   .seg button .n{padding:2px 6px;font-size:11px}
-  .lang{width:100%}
-  .lang button{flex:1}
+  .langswitch.sm{width:100%}
+  .langswitch.sm button{flex:1;min-width:0}
+  .hero-top{gap:16px}
   .hero .wrap{padding:40px 24px 34px}
   .cell{padding:20px}
   .row-head{padding:14px 20px;gap:10px}
@@ -209,7 +225,7 @@ body[data-lang="ro"] [data-l="en"]{display:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
-<body data-lang="en">
+<body data-lang="ro">
 
 <div class="notice">
   <div class="wrap">
@@ -222,10 +238,16 @@ body[data-lang="ro"] [data-l="en"]{display:none}
 
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">
-      <span data-l="en">Romanian social health insurance &middot; Paraclinical ambulatory care</span>
-      <span data-l="ro">Asigurări sociale de sănătate &middot; Ambulatoriu paraclinic</span>
-    </p>
+    <div class="hero-top">
+      <p class="eyebrow">
+        <span data-l="en">Romanian social health insurance &middot; Paraclinical ambulatory care</span>
+        <span data-l="ro">Asigurări sociale de sănătate &middot; Ambulatoriu paraclinic</span>
+      </p>
+      <div class="langswitch" role="group" aria-label="Limbă / Language">
+        <button type="button" data-setlang="ro" aria-pressed="true">RO</button>
+        <button type="button" data-setlang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <h1>
       <span data-l="en">What changes for <em>radiology and medical imaging</em> providers</span>
       <span data-l="ro">Ce se schimbă pentru furnizorii de <em>radiologie și imagistică medicală</em></span>
@@ -338,9 +360,9 @@ body[data-lang="ro"] [data-l="en"]{display:none}
         <span data-l="en">Implementing rules</span><span data-l="ro">Normele metodologice</span><span class="n">11</span>
       </button>
     </div>
-    <div class="lang" role="group" aria-label="Language / Limbă">
-      <button type="button" id="btn-en" aria-pressed="true">EN</button>
-      <button type="button" id="btn-ro" aria-pressed="false">RO</button>
+    <div class="langswitch sm" role="group" aria-label="Limbă / Language">
+      <button type="button" data-setlang="ro" aria-pressed="true">RO</button>
+      <button type="button" data-setlang="en" aria-pressed="false">EN</button>
     </div>
   </div>
 </div>
@@ -792,8 +814,9 @@ function setPart(id, scroll){
 function setLang(l){
   document.body.setAttribute('data-lang',l);
   document.documentElement.setAttribute('lang', l==='ro'?'ro':'en');
-  document.getElementById('btn-en').setAttribute('aria-pressed', l==='en'?'true':'false');
-  document.getElementById('btn-ro').setAttribute('aria-pressed', l==='ro'?'true':'false');
+  [].forEach.call(document.querySelectorAll('[data-setlang]'),function(btn){
+    btn.setAttribute('aria-pressed', btn.getAttribute('data-setlang')===l ? 'true':'false');
+  });
   try{ localStorage.setItem('lang',l); }catch(e){}
 }
 
@@ -801,13 +824,13 @@ render();
 setPart('hg', false);
 document.getElementById('seg-hg').addEventListener('click',function(){setPart('hg',true);});
 document.getElementById('seg-ord').addEventListener('click',function(){setPart('ord',true);});
-document.getElementById('btn-en').addEventListener('click',function(){setLang('en');});
-document.getElementById('btn-ro').addEventListener('click',function(){setLang('ro');});
+[].forEach.call(document.querySelectorAll('[data-setlang]'),function(btn){
+  btn.addEventListener('click',function(){ setLang(btn.getAttribute('data-setlang')); });
+});
 
 var sl=null, sp=null;
 try{ sl=localStorage.getItem('lang'); sp=localStorage.getItem('part'); }catch(e){}
-if(sl==='ro'||sl==='en'){ setLang(sl); }
-else if((navigator.language||'').toLowerCase().indexOf('ro')===0){ setLang('ro'); }
+setLang(sl==='en' ? 'en' : 'ro');
 if(sp==='ord'){ setPart('ord', false); }
 </script>
 </body>
