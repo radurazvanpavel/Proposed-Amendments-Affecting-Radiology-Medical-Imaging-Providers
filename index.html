@@ -185,6 +185,22 @@ del{color:var(--mute);text-decoration:line-through;text-decoration-thickness:1.5
 .none{color:var(--mute);font-style:italic}
 .xref{display:block;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;color:var(--mute)}
 .gap{display:block;padding:14px 16px;background:#FFF8E9;border:1px solid #F0DDB0;border-radius:12px;font-size:14.5px;color:#6B5628}
+
+/* ---------- semnalizare revizuire ---------- */
+.revbar{background:#FFF8E9;border-top:1px solid #F0DDB0;border-bottom:1px solid #F0DDB0}
+.revbar .wrap{padding:15px 24px}
+.revbar p{margin:0;font-size:14.5px;line-height:1.58;color:#6B5628;max-width:98ch}
+.revbar b{font-weight:700}
+.revbar a{color:#6B5628;font-weight:700;text-decoration-color:rgba(107,86,40,.45)}
+.rev{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:#6B5628;background:#FFF8E9;border:1px solid #EBD9AF;border-radius:7px;padding:3px 9px;white-space:nowrap}
+.row[data-rev] .row-head{box-shadow:inset 0 -2px 0 #EBD9AF}
+del.pulled{background:#FFF8E9;color:#6B5628;text-decoration:line-through;text-decoration-thickness:1.5px;
+  text-decoration-color:rgba(107,86,40,.65);box-shadow:inset 0 -1.5px 0 rgba(107,86,40,.3);padding:1px 2px;border-radius:3px}
+.revnote{display:block;margin-top:16px;padding:13px 15px;background:#FFF8E9;border:1px solid #F0DDB0;
+  border-radius:12px;font-size:14.5px;line-height:1.55;color:#6B5628}
+.revnote b{font-weight:700}
+.row:target{outline:3px solid #EBD9AF;outline-offset:4px}
 mark{background:rgba(42,209,188,.4);padding:1px 4px;border-radius:4px;color:var(--ink)}
 
 footer{margin-top:64px;border-top:1px solid var(--line);background:#fff}
@@ -232,6 +248,15 @@ body[data-lang="ro"] [data-l="en"]{display:none}
     <p>
       <span data-l="en"><b>Draft legislation.</b> Both instruments were published for public consultation by the National Health Insurance House on 30 July 2026 and are not in force. Consultation file: <a href="https://cnas.ro/transparenta-decizionala/" target="_blank" rel="noopener">cnas.ro/transparenta-decizionala</a></span>
       <span data-l="ro"><b>Proiecte de acte normative.</b> Ambele au fost publicate în transparență decizională de Casa Națională de Asigurări de Sănătate la 30 iulie 2026 și nu sunt în vigoare. Dosarul consultării: <a href="https://cnas.ro/transparenta-decizionala/" target="_blank" rel="noopener">cnas.ro/transparenta-decizionala</a></span>
+    </p>
+  </div>
+</div>
+
+<div class="revbar">
+  <div class="wrap">
+    <p>
+      <span data-l="en"><b>Revised draft.</b> Two provisions of the draft Government Decision differ from the version initially circulated: the self-declaration on the exclusive use of the equipment for insured patients — <a href="#row-hg-30" data-goto="hg">pt.&nbsp;30, Art.&nbsp;73(1) &#355;)</a> — and the corresponding ground for termination — <a href="#row-hg-36" data-goto="hg">pt.&nbsp;36, Art.&nbsp;82(1) i)</a>. Both have been dropped. The rows concerned are flagged <span class="rev">revised</span>. No other provision covered by this page has changed.</span>
+      <span data-l="ro"><b>Versiune revizuit&#259; a proiectului.</b> Dou&#259; dispozi&#355;ii din proiectul de hot&#259;r&#226;re difer&#259; fa&#355;&#259; de versiunea pus&#259; ini&#355;ial &#238;n circula&#355;ie: declara&#355;ia pe propria r&#259;spundere privind utilizarea exclusiv&#259; a aparaturii pentru pacien&#355;ii din sistemul de asigur&#259;ri — <a href="#row-hg-30" data-goto="hg">pct.&nbsp;30, art.&nbsp;73 alin.&nbsp;(1) lit.&nbsp;&#355;)</a> — &#351;i motivul de reziliere corespunz&#259;tor — <a href="#row-hg-36" data-goto="hg">pct.&nbsp;36, art.&nbsp;82 alin.&nbsp;(1) lit.&nbsp;i)</a>. Ambele au fost eliminate. R&#226;ndurile vizate sunt marcate <span class="rev">revizuit</span>. Nicio alt&#259; dispozi&#355;ie acoperit&#259; de aceast&#259; pagin&#259; nu s-a schimbat.</span>
     </p>
   </div>
 </div>
@@ -329,18 +354,18 @@ body[data-lang="ro"] [data-l="en"]{display:none}
       </article>
 
       <article class="kpi">
-        <p class="k-tag w"><span data-l="en">Termination</span><span data-l="ro">Reziliere</span></p>
-        <p class="k-metric"><span data-l="en">No private patients</span><span data-l="ro">Fără pacienți privați</span><span class="k-unit"><span data-l="en">On the declared equipment, in the declared hours</span><span data-l="ro">Pe aparatura declarată, în programul declarat</span></span></p>
-        <h3><span data-l="en">Using the equipment for private patients during the programme declared to the insurance house ends the contract</span><span data-l="ro">Utilizarea echipamentelor pentru pacienți privați pe programul declarat la casa de asigurări duce la rezilierea contractului</span></h3>
+        <p class="k-tag w"><span data-l="en">Termination &middot; revised</span><span data-l="ro">Reziliere &middot; revizuit</span></p>
+        <p class="k-metric"><span data-l="en">Dropped</span><span data-l="ro">Eliminat</span><span class="k-unit"><span data-l="en">From the revised draft</span><span data-l="ro">Din versiunea revizuit&#259; a proiectului</span></span></p>
+        <h3><span data-l="en">The exclusive-use declaration and the termination it triggered no longer appear in the draft</span><span data-l="ro">Declara&#355;ia de utilizare exclusiv&#259; a aparaturii &#351;i rezilierea aferent&#259; nu mai figureaz&#259; &#238;n proiect</span></h3>
         <p>
-          <span data-l="en">A private provider declares on its own responsibility that the equipment held is used, throughout the working programme declared and set out in the contract, exclusively for patients within the social health insurance system. A finding to the contrary is a ground for termination, not a graduated sanction.</span>
-          <span data-l="ro">Furnizorul privat declară pe propria răspundere că aparatura din dotare este utilizată, pe toată durata programului de lucru declarat și prevăzut în contract, exclusiv pacienților din sistemul de asigurări sociale de sănătate. Constatarea contrarului este motiv de reziliere, nu sancțiune graduală.</span>
+          <span data-l="en">The version initially circulated required a private provider to declare that its equipment is used, throughout the declared programme, exclusively for patients within the social health insurance system, and made a finding to the contrary a ground for termination. Neither provision is in the revised draft; letter &#355;) now carries the declaration on the two contracts per physician.</span>
+          <span data-l="ro">Versiunea pus&#259; ini&#355;ial &#238;n circula&#355;ie cerea furnizorului privat s&#259; declare c&#259; aparatura din dotare este utilizat&#259;, pe tot programul declarat, exclusiv pacien&#355;ilor din sistemul de asigur&#259;ri sociale de s&#259;n&#259;tate &#351;i f&#259;cea din constatarea contrarului un motiv de reziliere. Niciuna dintre cele dou&#259; dispozi&#355;ii nu se reg&#259;se&#351;te &#238;n versiunea revizuit&#259;; lit. &#355;) con&#355;ine acum declara&#355;ia privind cele dou&#259; contracte per medic.</span>
         </p>
         <div class="k-src">
-          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezultă</span>
+          <span data-l="en">Where this comes from</span><span data-l="ro">De unde rezult&#259;</span>
           <ul>
-            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 30 — Art. 73(1), new letter ț)</span><span data-l="ro">pct. 30 — art. 73 alin. (1), lit. ț) nouă</span></li>
-            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 36 — Art. 82(1) i)</span><span data-l="ro">pct. 36 — art. 82 alin. (1) lit. i)</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 30 &mdash; Art. 73(1), new letter &#355;)</span><span data-l="ro">pct. 30 &mdash; art. 73 alin. (1), lit. &#355;) nou&#259;</span></li>
+            <li><span class="act" data-l="en">Framework Contract</span><span class="act" data-l="ro">Contract-cadru</span><span data-l="en">pt. 36 &mdash; Art. 82(1) i)</span><span data-l="ro">pct. 36 &mdash; art. 82 alin. (1) lit. i)</span></li>
           </ul>
         </div>
       </article>
@@ -374,6 +399,7 @@ body[data-lang="ro"] [data-l="en"]{display:none}
     <span><span class="sw" style="background:var(--mute)"></span><span data-l="en">Repealed</span><span data-l="ro">Abrogat</span></span>
     <span><ins data-l="en">inserted wording</ins><ins data-l="ro">text introdus</ins></span>
     <span><del data-l="en">removed wording</del><del data-l="ro">text eliminat</del></span>
+    <span><span class="sw" style="background:#C9A227"></span><span data-l="en">Revised against the initial draft</span><span data-l="ro">Revizuit fa&#355;&#259; de versiunea ini&#355;ial&#259;</span></span>
   </div>
 </div>
 
@@ -385,8 +411,8 @@ body[data-lang="ro"] [data-l="en"]{display:none}
   <div class="wrap">
     <h4><span data-l="en">Reading notes</span><span data-l="ro">Note de lectură</span></h4>
     <p>
-      <span data-l="en">Romanian is the authentic language of both instruments; the English column is a working translation and has no official standing. The text in force is taken from the consolidated version of 16 January 2026 of the Framework Contract, of 1 January 2026 of the implementing rules and of 13 February 2025 of Annex 18. Point numbers refer to the numbering used in the drafts. Where a draft point rewrites an entire provision, the wording carried over unchanged is shown without marking, so that only the substantive delta stands out. The model contract in Annex 21 to Order 1857/441/2023, which the draft repeals, is described rather than reproduced in full.</span>
-      <span data-l="ro">Limba autentică a ambelor acte este româna; coloana în engleză este o traducere de lucru și nu are caracter oficial. Textul în vigoare este preluat din forma consolidată la 16 ianuarie 2026 a Contractului-cadru, la 1 ianuarie 2026 a normelor metodologice și la 13 februarie 2025 a anexei nr. 18. Numerotarea punctelor este cea din proiecte. Acolo unde un punct din proiect rescrie integral o dispoziție, textul preluat nemodificat este redat fără marcaje, astfel încât să rămână vizibilă doar diferența de fond. Modelul de contract din anexa nr. 21 la Ordinul nr. 1857/441/2023, pe care proiectul îl abrogă, este descris, nu reprodus integral.</span>
+      <span data-l="en">Romanian is the authentic language of both instruments; the English column is a working translation and has no official standing. The text in force is taken from the consolidated version of 16 January 2026 of the Framework Contract, of 1 January 2026 of the implementing rules and of 13 February 2025 of Annex 18. Point numbers refer to the numbering used in the drafts. Where a draft point rewrites an entire provision, the wording carried over unchanged is shown without marking, so that only the substantive delta stands out. The model contract in Annex 21 to Order 1857/441/2023, which the draft repeals, is described rather than reproduced in full. This page reflects the revised version of the draft Government Decision; provisions that differ from the version initially circulated are flagged &ldquo;revised&rdquo;, and wording that no longer appears in the draft is shown struck through on an amber ground.</span>
+      <span data-l="ro">Limba autentică a ambelor acte este româna; coloana în engleză este o traducere de lucru și nu are caracter oficial. Textul în vigoare este preluat din forma consolidată la 16 ianuarie 2026 a Contractului-cadru, la 1 ianuarie 2026 a normelor metodologice și la 13 februarie 2025 a anexei nr. 18. Numerotarea punctelor este cea din proiecte. Acolo unde un punct din proiect rescrie integral o dispoziție, textul preluat nemodificat este redat fără marcaje, astfel încât să rămână vizibilă doar diferența de fond. Modelul de contract din anexa nr. 21 la Ordinul nr. 1857/441/2023, pe care proiectul îl abrogă, este descris, nu reprodus integral. Pagina reflectă versiunea revizuită a proiectului de hotărâre; dispozițiile care diferă față de versiunea pusă inițial în circulație sunt marcate „revizuit”, iar textul care nu se mai regăsește în proiect este redat tăiat, pe fundal chihlimbariu.</span>
     </p>
   </div>
 </footer>
@@ -491,15 +517,15 @@ var PARTS = [
    ]},
    {label:{en:'Documents required at contracting', ro:'Documente necesare la contractare'}, rows:[
     {
-      pt:'30', kind:'new',
-      ref:{en:'Annex 2, Art. 73(1) — new letters ț) and u)', ro:'Anexa nr. 2, art. 73 alin. (1) — lit. ț) și u) noi'},
+      pt:'30', kind:'new', rev:true,
+      ref:{en:'Annex 2, Art. 73(1) — new letter ț)', ro:'Anexa nr. 2, art. 73 alin. (1) — lit. ț) nouă'},
       cur:{
         en:'<p>The list of contracting documents in Art. 73(1) ends at letter t). It already includes, at letters g) and h), the periodic verification bulletin for radiology — medical imaging and nuclear medicine equipment and the use notice issued by ANMDMR for second-hand equipment, and, at letter l), the ISO 9001/2015 certificate for radiology — medical imaging and nuclear medicine providers.</p>'+NONE.en,
         ro:'<p>Lista documentelor de contractare din art. 73 alin. (1) se încheie la lit. t). Ea cuprinde deja, la lit. g) și h), buletinul de verificare periodică pentru aparatura de radiologie — imagistică medicală și medicină nucleară și avizul de utilizare emis de ANMDMR pentru aparatura second-hand, iar la lit. l), certificatul ISO 9001/2015 pentru furnizorii de radiologie — imagistică medicală și medicină nucleară.</p>'+NONE.ro
       },
       pro:{
-        en:'<p><ins>ț) the declaration on own responsibility, for private medical service providers, on the use of the medical equipment held, throughout the working programme declared and set out in the contract concluded with the health insurance house, exclusively for patients within the social health insurance system.</ins></p><p><ins>u) the declaration on own responsibility concerning the contracts under which the physicians practise, where they operate under two contracts concluded with the health insurance house or houses, the model of which is set out in the implementing rules.</ins></p>',
-        ro:'<p><ins>ț) declarația pe proprie răspundere pentru furnizorii de servicii medicale privați cu privire la utilizarea aparaturii medicale din dotare pe toată durata programului de lucru declarat și prevăzut în contractul încheiat cu casa de asigurări de sănătate, exclusiv pacienților din sistemul de asigurări sociale de sănătate.</ins></p><p><ins>u) declaraţie pe propria răspundere privind contractele în baza cărora medicii îşi desfăşoară activitatea, în cazul în care aceştia activează sub incidenţa a două contracte încheiate cu casa/casele de asigurări de sănătate, al cărei model este prevăzut în norme.</ins></p>'
+        en:'<p><ins>ț) the declaration on own responsibility concerning the contracts under which the physicians practise, where they operate under two contracts concluded with the health insurance house or houses, the model of which is set out in the implementing rules.</ins></p><span class="revnote"><b>Revised.</b> The version initially circulated introduced two letters. Letter ț) then read: <del class="pulled">the declaration on own responsibility, for private medical service providers, on the use of the medical equipment held, throughout the working programme declared and set out in the contract concluded with the health insurance house, exclusively for patients within the social health insurance system</del> — and the declaration on the two contracts stood at letter u). The revised draft introduces a single letter, ț), carrying the declaration on the two contracts.</span>',
+        ro:'<p><ins>ț) declaraţie pe propria răspundere privind contractele în baza cărora medicii îşi desfăşoară activitatea, în cazul în care aceştia activează sub incidenţa a două contracte încheiate cu casa/casele de asigurări de sănătate, al cărei model este prevăzut în norme.</ins></p><span class="revnote"><b>Revizuit.</b> Versiunea pusă inițial în circulație introducea două litere. Lit. ț) avea atunci cuprinsul: <del class="pulled">declarația pe proprie răspundere pentru furnizorii de servicii medicale privați cu privire la utilizarea aparaturii medicale din dotare pe toată durata programului de lucru declarat și prevăzut în contractul încheiat cu casa de asigurări de sănătate, exclusiv pacienților din sistemul de asigurări sociale de sănătate</del> — iar declarația privind cele două contracte figura la lit. u). Versiunea revizuită introduce o singură literă, ț), cu declarația privind cele două contracte.</span>'
       }
     },
     {
@@ -564,15 +590,15 @@ var PARTS = [
       }
     },
     {
-      pt:'36', kind:'amended',
+      pt:'36', kind:'amended', rev:true,
       ref:{en:'Annex 2, Art. 82(1) i) — termination of the contract', ro:'Anexa nr. 2, art. 82 alin. (1) lit. i) — rezilierea contractului'},
       cur:{
         en:'<p>i) in the event of breach of the obligations laid down in <del>Art. 72(8) and of those laid down in</del> Art. 74 q), ș)–u);</p>',
         ro:'<p>i) în cazul nerespectării obligaţiilor prevăzute la <del>art. 72 alin. (8) şi a celor prevăzute la</del> art. 74 lit. q), ş)-u);</p>'
       },
       pro:{
-        en:'<p>i) in the event of breach of the obligations laid down in Art. 74 q), ș) – u) <ins>and ad), as well as where it is found that, during the working programme, the equipment held has been used outside the social health insurance system, contrary to the declaration provided for in Art. 73(1) ț)</ins>;</p><span class="xref">Termination is decoupled from Art. 72(8) — consistent with the move from one contract to two per physician — and is attached instead to the 10-year access obligation and to the new declaration on exclusive use of equipment.</span>',
-        ro:'<p>i) în cazul nerespectării obligaţiilor prevăzute la art. 74 lit. q), ş) - u) <ins>și ad), precum și în cazul în care se constată că pe durata programului de lucru, aparatele din dotare au fost utilizate în afara sistemului de asigurări sociale de sănătate, contrar declarației prevăzute la art. 73 alin. (1) lit. ț)</ins>;</p><span class="xref">Rezilierea se desprinde de art. 72 alin. (8) — coerent cu trecerea de la un contract la două per medic — și se leagă, în schimb, de obligația de acces pe 10 ani și de noua declarație privind utilizarea exclusivă a aparaturii.</span>'
+        en:'<p>i) in the event of breach of the obligations laid down in Art. 74 q), ș) – u) <ins>and ad)</ins>;</p><span class="xref">Termination is decoupled from Art. 72(8) — consistent with the move from one contract to two per physician — and is attached instead to the 10-year access obligation.</span><span class="revnote"><b>Revised.</b> The version initially circulated added a second ground here: <del class="pulled">as well as where it is found that, during the working programme, the equipment held has been used outside the social health insurance system, contrary to the declaration provided for in Art. 73(1) ț)</del>. It does not appear in the revised draft, which retains only the reference to Art. 74 ad).</span>',
+        ro:'<p>i) în cazul nerespectării obligaţiilor prevăzute la art. 74 lit. q), ş) - u) <ins>și ad)</ins>;</p><span class="xref">Rezilierea se desprinde de art. 72 alin. (8) — coerent cu trecerea de la un contract la două per medic — și se leagă, în schimb, de obligația de acces pe 10 ani.</span><span class="revnote"><b>Revizuit.</b> Versiunea pusă inițial în circulație adăuga aici un al doilea motiv: <del class="pulled">precum și în cazul în care se constată că pe durata programului de lucru, aparatele din dotare au fost utilizate în afara sistemului de asigurări sociale de sănătate, contrar declarației prevăzute la art. 73 alin. (1) lit. ț)</del>. El nu se regăsește în versiunea revizuită, care păstrează numai trimiterea la art. 74 lit. ad).</span>'
       }
     }
    ]},
@@ -773,7 +799,8 @@ var L = {
     'amended':{en:'Amended', ro:'Modificat'},
     'repealed':{en:'Repealed', ro:'Abrogat'}
   },
-  pt:{en:'pt.', ro:'pct.'}
+  pt:{en:'pt.', ro:'pct.'},
+  rev:{en:'revised', ro:'revizuit'}
 };
 
 function bi(o){ return '<span data-l="en">'+o.en+'</span><span data-l="ro">'+o.ro+'</span>'; }
@@ -786,11 +813,13 @@ function render(){
     part.groups.forEach(function(g){
       out+='<h3 class="subhead">'+bi(g.label)+'</h3>';
       g.rows.forEach(function(r){
-        out+='<article class="row" data-kind="'+r.kind+'">';
+        var rid = 'row-'+part.id+'-'+String(r.pt).replace(/[^0-9A-Za-z]+/g,'');
+        out+='<article class="row" id="'+rid+'" data-kind="'+r.kind+'"'+(r.rev?' data-rev="1"':'')+'>';
         out+='<div class="row-head">';
         out+='<span class="pt">'+(/^Art\./.test(r.pt) ? r.pt : bi(L.pt)+' '+r.pt)+'</span>';
         out+='<span class="badge">'+bi(L.kind[r.kind])+'</span>';
         out+='<span class="ref">'+bi(r.ref)+'</span>';
+        if(r.rev){ out+='<span class="rev">'+bi(L.rev)+'</span>'; }
         out+='</div><div class="row-body">';
         out+='<div class="cell"><p class="cell-label">'+bi(L.cur)+'</p>'+bi(r.cur)+'</div>';
         out+='<div class="cell"><p class="cell-label">'+bi(L.pro)+'</p>'+bi(r.pro)+'</div>';
@@ -826,6 +855,15 @@ document.getElementById('seg-hg').addEventListener('click',function(){setPart('h
 document.getElementById('seg-ord').addEventListener('click',function(){setPart('ord',true);});
 [].forEach.call(document.querySelectorAll('[data-setlang]'),function(btn){
   btn.addEventListener('click',function(){ setLang(btn.getAttribute('data-setlang')); });
+});
+
+[].forEach.call(document.querySelectorAll('[data-goto]'),function(a){
+  a.addEventListener('click',function(ev){
+    ev.preventDefault();
+    setPart(a.getAttribute('data-goto'), false);
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){ t.scrollIntoView({block:'center'}); if(history.replaceState){ history.replaceState(null,'',a.getAttribute('href')); } }
+  });
 });
 
 var sl=null, sp=null;
